@@ -11,21 +11,27 @@ import ProtectedRoute from "./ProtectedRoute";
 import ProfilePage from "./Pages/profilePage";
 import HomePage from "./Pages/HomePage";
 
+import { TaskProvider } from "./Context/TasksContext";
+import NavBar from "./Components/NavBar";
+
 function App() {
   return(
     <>
-      <AuthProvider>
-      <BrowserRouter>
-        <Routes>
+    <AuthProvider>
+      <TaskProvider>
+        <BrowserRouter>
+          <main className="container mx-auto px-10">
+           <NavBar />
+            <Routes>
           
-          <Route path="/" element={ <HomePage /> } />
+            <Route path="/" element={ <HomePage /> } />
 
-          <Route path="/login" element={ <LoginPage /> } />
+            <Route path="/login" element={ <LoginPage /> } />
 
-          <Route path="/register" element={ <RegisterPage /> } />
+            <Route path="/register" element={ <RegisterPage /> } />
 
 
-          <Route element={<ProtectedRoute />}>
+            <Route element={<ProtectedRoute />}>
               <Route path="/tasks" element={ <TasksPage /> } />
 
               <Route path="/add-task" element={ <TaskFormPage /> } />
@@ -33,11 +39,13 @@ function App() {
               <Route path="/tasks/:id" element={ <TaskFormPage /> } />
 
               <Route path="/profile" element={ <ProfilePage /> } />
-          </Route>
+            </Route>
 
-        </Routes>
-      </BrowserRouter>
-      </AuthProvider>
+            </Routes>
+          </main>
+        </BrowserRouter>
+      </TaskProvider>
+    </AuthProvider>
     </>
   );
 }

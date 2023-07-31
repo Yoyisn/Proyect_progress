@@ -1,24 +1,35 @@
+import { useTasks } from '../Context/TasksContext';
+import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
 function TaskFormPage() {
 
     const { register, handleSubmit } = useForm();
 
+    const { createTask } = useTasks();
+
+    const navigate = useNavigate();
+
     const onSubmit = handleSubmit((data) => {
-        console.log(data);
+        createTask(data);
+        navigate('/tasks');
     });
 
     return(
         <>
-         <div>
-            <form onSubmit={ onSubmit }>
+             <div className='bg-zinc-800 max-w-md w-full p-10 rounded-md'>
+                <form onSubmit={onSubmit}>
+                    <input  className='w-full  bg-zinc-700 text-white px-4 py-2 rounded-md my-2'
+                     type='text' placeholder='Title' 
+                     {...register("title")} autoFocus/>
 
-                <input  {...register('Title')} type="text" placeholder="Title" autoFocus/>
-                <textarea  {...register('Description')} rows="3" placeholder="Description"></textarea>
-                <button> SAVE </button>
+                    <textarea className='w-full  bg-zinc-700 text-white px-4 py-2 rounded-md my-2'
+                     rows="3" placeholder='Description' {...register("description")} 
+                     autoFocus></textarea>
 
-            </form>
-         </div>
+                    <button type='submit'> Save </button>
+                </form>
+            </div>
         </>
     );
 };

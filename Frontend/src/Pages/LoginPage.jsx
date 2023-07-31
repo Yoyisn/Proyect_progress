@@ -12,13 +12,13 @@ function LoginPage() {
 
   const navigate = useNavigate();
 
-    useEffect(() => {
-      if(isAuthenticated) navigate("/tasks");
-    }, [isAuthenticated]);
-
   const onSubmit = handleSubmit((data) => {
     signin(data);
   });
+
+  useEffect(() => {
+    if(isAuthenticated) navigate("/tasks");
+  }, [isAuthenticated]);
 
     return (
         <>
@@ -34,15 +34,15 @@ function LoginPage() {
 
             <form onSubmit={ onSubmit }>
 
-<input className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2"
- type="email" {...register('email', {required:true})} placeholder="E-mail"/>
- { errors.email && (<p className="text-red-500"> Email required </p>) }
+              <input className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2"
+              type="email" {...register('email', {required:true})} placeholder="E-mail"/>
+              { errors.email && (<p className="text-red-500"> Email required </p>) }
 
-<input className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2"
- type="password" {...register('password', {required:true})} placeholder="Password"/>
- { errors.password && (<p className="text-red-500"> Password required </p>) }
+              <input className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2"
+              type="password" {...register('password', {required:true})} placeholder="Password"/>
+              { errors.password && (<p className="text-red-500"> Password required </p>) }
 
-<button  className="my-2" type="submit"> Login </button>
+              <button  className="my-2" type="submit"> Login </button>
 
              </form>
 
