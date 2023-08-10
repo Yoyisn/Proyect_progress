@@ -30,7 +30,7 @@ function LoginPage() {
             })
           }
 
-              <h1 className="text-2x1 font-bold"> LOGIN </h1>
+              <h1 className="text-3xl font-bold my-2"> LOGIN </h1>
 
             <form onSubmit={ onSubmit }>
 
@@ -42,7 +42,7 @@ function LoginPage() {
               type="password" {...register('password', {required:true})} placeholder="Password"/>
               { errors.password && (<p className="text-red-500"> Password required </p>) }
 
-              <button  className="my-2" type="submit"> Login </button>
+              <button  className="bg-sky-500 text-white px-4 py-2 rounded-md my-2"> Login </button>
 
              </form>
 
