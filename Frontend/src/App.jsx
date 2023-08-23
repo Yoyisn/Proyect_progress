@@ -12,7 +12,7 @@ import ProfilePage from "./Pages/profilePage";
 import HomePage from "./Pages/HomePage";
 
 import { TaskProvider } from "./Context/TasksContext";
-import NavBar from "./Components/NavBar";
+import TechRegisterPage from "./Pages/TechRegister";
 
 function App() {
   return(
@@ -21,7 +21,6 @@ function App() {
       <TaskProvider>
         <BrowserRouter>
           <main className="container mx-auto px-10">
-           <NavBar />
             <Routes>
           
             <Route path="/" element={ <HomePage /> } />
@@ -29,6 +28,8 @@ function App() {
             <Route path="/login" element={ <LoginPage /> } />
 
             <Route path="/register" element={ <RegisterPage /> } />
+
+            <Route path="/techRegister" element={ <TechRegisterPage /> } />
 
 
             <Route element={<ProtectedRoute />}>
