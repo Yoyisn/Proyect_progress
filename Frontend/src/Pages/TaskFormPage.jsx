@@ -47,6 +47,7 @@ function TaskFormPage() {
 
     return(
         <>
+            <div className="flex h-[calc(100vh-100px)] items-center justify-center">
              <div className='bg-zinc-800 max-w-md w-full p-10 rounded-md'>
                 <form onSubmit={onSubmit}>
                     <label htmlFor='title'> Title </label>
@@ -66,6 +67,7 @@ function TaskFormPage() {
 
                     <button className='bg-indigo-500 px-3 py-2 rounded-md'> Save </button>
                 </form>
+             </div>
             </div>
         </>
     );

@@ -13,6 +13,7 @@ import HomePage from "./Pages/HomePage";
 
 import { TaskProvider } from "./Context/TasksContext";
 import TechRegisterPage from "./Pages/TechRegister";
+import TechProfilePage from './Pages/TechProfile';
 
 function App() {
   return(
@@ -33,6 +34,9 @@ function App() {
 
 
             <Route element={<ProtectedRoute />}>
+
+              <Route path="/techProfile" element={ <TechProfilePage/> }/>
+
               <Route path="/tasks" element={ <TasksPage /> } />
 
               <Route path="/add-task" element={ <TaskFormPage /> } />

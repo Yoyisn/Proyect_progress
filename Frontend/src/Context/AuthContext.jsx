@@ -1,4 +1,4 @@
-import { registerRequest, loginRequest, verifyTokenRequest } from "../Api/auth";
+import { registerTecnicoRequest, registerRequest, loginRequest, verifyTokenRequest } from "../Api/auth";
 import { createContext, useState, useContext, useEffect } from "react";
 import Cookies from 'js-cookie';
 
@@ -14,6 +14,7 @@ export const useAuth = () => {
 
 export const AuthProvider = ({ children }) => {
 
+    const [tecnico, setTecnico] = useState(null);
     const [user, setUser] = useState(null);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [errors, setErrors] = useState([]);
@@ -24,6 +25,17 @@ export const AuthProvider = ({ children }) => {
             const res = await registerRequest(user);
             console.log(res.data);
             setUser(res.data);
+            setIsAuthenticated(true);
+        } catch (error) {
+            setErrors(error.response.data);
+        }
+    };
+
+    const sigupTecnico = async (tecnico) => {
+        try {
+            const res = await registerTecnicoRequest(tecnico);
+            console.log(res.data);
+            setTecnico(res.data);
             setIsAuthenticated(true);
         } catch (error) {
             setErrors(error.response.data);
@@ -89,7 +101,7 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     return (
-        <AuthContext.Provider value={{ sigup, signin, logout, loading, user, isAuthenticated, errors }}>
+        <AuthContext.Provider value={{ sigupTecnico, sigup, signin, logout, loading, user, isAuthenticated, errors }}>
             { children }
         </AuthContext.Provider>
     );

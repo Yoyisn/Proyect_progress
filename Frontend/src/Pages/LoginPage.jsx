@@ -8,12 +8,13 @@ function LoginPage() {
 
   const {register, handleSubmit, formState: {errors}} = useForm();
 
-  const { signin, isAuthenticated, errors: signinErrors } = useAuth();
+  const { signinTecnico, signin, isAuthenticated, errors: signinErrors } = useAuth();
 
   const navigate = useNavigate();
 
   const onSubmit = handleSubmit((data) => {
     signin(data);
+    signinTecnico(data);
   });
 
   useEffect(() => {

@@ -2,6 +2,7 @@ import { createAccessToken } from '../Libs/jwt.js';
 import User from '../Models/user.model.js';
 import bcrypt from 'bcryptjs';
 
+import Tecnico from '../Models/tecnico.models.js';
 import { TOKEN_SECRET } from '../config.js';
 import jwt from 'jsonwebtoken';
 
@@ -34,6 +35,39 @@ export const register = async (req, res) => {
             updateAt: userSaved.updateAt,
         });
        
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+
+export const techRegister = async (req, res) => {
+    const { name, email, password, number } = req.body;
+
+    try {
+        const techFound = await Tecnico.findOne({email});
+        if (techFound) return res.status(406).json([ "The Email already exist, in use" ]);
+
+        const passwordHash = await bcrypt.hash(password, 11);
+
+        const newTech =  new Tecnico({
+            name,
+            email,
+            password: passwordHash,
+            number,
+        });
+
+        const techSaved = await newTech.save();
+
+        const token = await createAccessToken({ id: techSaved._id });
+
+        res.cookie("token", token);
+        res.json({
+            id: techSaved._id,
+            name: techSaved.name,
+            email: techSaved.email,
+            createAt: techSaved.createdAt,
+            updateAt: techSaved.updateAt,
+        });
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
