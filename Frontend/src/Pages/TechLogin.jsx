@@ -23,10 +23,10 @@ function TechLogin() {
     return(
         <>
             <div className="flex h-[calc(100vh-100px)] items-center justify-center">
-            <div className="bg-zinc-800 max-w-md w-full p-10 rounded-md">
+            <div className="bg-Darkred max-w-md w-full p-10 rounded-md">
             {
               signinErrors.map((error, i) => {
-              <div key={i} className="bg-red-500 p-2 text-white text-center my-2"> { error } </div>
+              <div key={i} className="bg-Softorange p-2 text-black text-center my-2"> { error } </div>
             })
             }
 
@@ -34,15 +34,15 @@ function TechLogin() {
 
             <form onSubmit={ onSubmit }>
 
-              <input className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2"
+              <input className="w-full bg-Grayishblue text-black px-4 py-2 rounded-md my-2"
               type="email" {...register('email', {required:true})} placeholder="E-mail"/>
-              { errors.email && (<p className="text-red-500"> Email required </p>) }
+              { errors.email && (<p className="text-Softorange"> Email required </p>) }
 
-              <input className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2"
+              <input className="w-full bg-Grayishblue text-black px-4 py-2 rounded-md my-2"
               type="password" {...register('password', {required:true})} placeholder="Password"/>
-              { errors.password && (<p className="text-red-500"> Password required </p>) }
+              { errors.password && (<p className="text-Softorange"> Password required </p>) }
 
-              <button  className="bg-sky-500 text-white px-4 py-2 rounded-md my-2"> Login </button>
+              <button  className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-4 py-2 rounded-md my-2"> Login </button>
 
              </form>
 
@@ -50,7 +50,7 @@ function TechLogin() {
                Don't have you an technical account?
              </p>
 
-            <button className="bg-sky-500 text-white px-4 py-2 rounded-md my-2"> <Link to="/techRegister"> Sign up </Link> </button>
+            <button className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-4 py-2 rounded-md my-2"> <Link to="/techRegister"> Sign up </Link> </button>
 
             </div>
           </div>

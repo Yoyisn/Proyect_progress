@@ -20,7 +20,7 @@ function RegisterPage() {
     return (
         <>
       <div className="flex h-[calc(100vh-100px)] items-center justify-center">
-        <div className="bg-zinc-800 max-w-md p-10 rounded-md">
+        <div className="bg-Darkred max-w-md p-10 rounded-md">
           {/*
             registerErrors.map((error, i) => {
               <div key={i} className="bg-red-500 p-2 text-white text-center"> { error } </div>
@@ -33,28 +33,28 @@ function RegisterPage() {
              sigup(values);
             }) }>
 
-            <input className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2" 
+            <input className="w-full bg-Grayishblue text-black px-4 py-2 rounded-md my-2" 
             type="text" {...register('username', {required: true})} placeholder="Username"/>
-            { errors.username && (<p className="text-red-500"> Username required </p>) }
+            { errors.username && (<p className="text-Softorange"> Username required </p>) }
 
-            <input className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2"
+            <input className="w-full bg-Grayishblue text-black px-4 py-2 rounded-md my-2"
              type="email" {...register('email', {required:true})} placeholder="E-mail"/>
-             { errors.email && (<p className="text-red-500"> Email required </p>) }
+             { errors.email && (<p className="text-Softorange"> Email required </p>) }
 
-            <input className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2"
+            <input className="w-full bg-Grayishblue text-black px-4 py-2 rounded-md my-2"
              type="password" {...register('password', {required:true})} placeholder="Password"/>
-             { errors.password && (<p className="text-red-500"> Password required </p>) }
+             { errors.password && (<p className="text-Softorange"> Password required </p>) }
 
-            <button className="bg-sky-500 text-white px-4 py-2 rounded-md my-2"> Register </button>
+            <button className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-4 py-2 rounded-md my-2"> Register </button>
 
           </form>
 
           <p className="flex gap-x-2 justify-between">
-              Already have an account? <Link className="text-sky-500" to="/login"> Login </Link>
+              Already have an account? <Link className="text-Bgblue" to="/login"> Login </Link>
           </p>
 
           <strong>Do you want to be a Technical?</strong>
-          <button className="bg-sky-500 text-white px-4 py-2 rounded-md my-2"> <Link to="/techRegister"> Click me </Link> </button>
+          <button className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-4 py-2 rounded-md my-2"> <Link to="/techRegister"> Click me </Link> </button>
 
           </div>
       </div>  
