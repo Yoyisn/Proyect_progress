@@ -1,5 +1,14 @@
 import Task from '../Models/task.model.js';
 
+export const getAllTasks = async (req, res) => {
+    try {
+        const tasks = await Task.find();
+        res.json(tasks);
+    } catch (error) {
+        return res.status(500).json({message: "Something went wrong"});
+    }
+};
+
 export const getTasks = async (req, res) => {
     try {
         const tasks = await Task.find({

@@ -139,7 +139,7 @@ export const logout = async (req, res) => {
 export const profile = async (req, res) => {
     const userFound = await User.findById(req.user.id);
 
-    if(!userFound) return res.status(400).json({ "Message": "User not found" })
+    if(!userFound) return res.status(400).json({ "Message": "User not found" });
 
     return res.json({
         id: userFound._id,
@@ -147,16 +147,52 @@ export const profile = async (req, res) => {
         email: userFound.email,
         createAt: userFound.createAt,
         updateAt: userFound.updateAt,
-    })
+    });
+};
+
+export const techProfile = async (req, res) => {
+    const techFound = await Tecnico.findById(req.user.id);
+
+    if(!techFound) return res.status(400).json({ "Message": "User not found" });
+
+    return res.json({
+        id: techFound._id,
+        username: techFound.username,
+        email: techFound.email,
+        createAt: techFound.createAt,
+        updateAt: techFound.updateAt,
+    });
 };
 
 export const verifyToken = async (req, res) => {
     const {token} = req.cookies;
     if(!token) return res.status(401),json({message: "Inautorizado"});
 
-    jwt.verify(token, TOKEN_SECRET, async (err, user) => {
+    jwt.verify(token, TOKEN_SECRET, async (err, user, tecnico) => {
         if (err) return res.status(401).json({ message: "Inautorizado" });
 
+        /*
+        const userFound = await User.findById(user.id);
+        const techFound = await Tecnico.findById(tecnico.id);
+
+    
+        if (userFound) {
+            return res.json({
+                id: userFound._id,
+                username: userFound.username,
+                email: userFound.email,
+            });
+        }
+
+        if (techFound) {
+            return res.json({
+                id: techFound._id,
+                username: techFound.username,
+                email: techFound.email,
+            });
+        }
+        */
+        
         const userFound = await User.findById(user.id);
         if (!userFound) return res.status(401).json({ message: "Inautorizado" });
 

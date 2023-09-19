@@ -3,6 +3,9 @@ import axios from './axios.js';
 export const getTasksRequest = () => 
 axios.get('/tasks');
 
+export const getAllTasksRequest = () => 
+axios.get('/comunityProblems');
+
 export const getTaskRequest = (id) => 
 axios.get(`/tasks/${id}`);
 

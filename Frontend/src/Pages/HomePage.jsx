@@ -7,9 +7,15 @@ function HomePage() {
         <div>
         <NavBar />
 
+        <strong> Eres el tecnico? Registrate: </strong>
         <button>
-          <Link to="/techRegister"> Registro Tecnico </Link>
+          <Link to="/techRegister"> Click me </Link>
         </button>
+
+        <br />
+
+        <strong>Ya tienes tu cuenta y eres el tenico? Inicia sesion aqui: </strong>
+        <button> <Link to="/techLogin"> Click me </Link> </button>
         </div>
         </>
     );

@@ -15,6 +15,7 @@ import { TaskProvider } from "./Context/TasksContext";
 import TechRegisterPage from "./Pages/TechRegister";
 import TechProfilePage from './Pages/TechProfile';
 
+import PageProblems from "./Pages/PageProblems";
 import TechLogin from "./Pages/TechLogin";
 
 function App() {
@@ -40,6 +41,8 @@ function App() {
             <Route element={<ProtectedRoute />}>
 
               <Route path="/techProfile" element={ <TechProfilePage/> }/>
+
+              <Route path="/comunityProblems" element={ <PageProblems/> }/>
 
               <Route path="/tasks" element={ <TasksPage /> } />
 

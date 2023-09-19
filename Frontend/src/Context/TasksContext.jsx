@@ -1,4 +1,4 @@
-import {createTaskRequest, getTasksRequest, deleteTaskRequest, getTaskRequest, updateTaskRequest} from '../Api/tasks.js';
+import {getAllTasksRequest, createTaskRequest, getTasksRequest, deleteTaskRequest, getTaskRequest, updateTaskRequest} from '../Api/tasks.js';
 import { createContext, useContext, useState } from "react";
 
 const TaskContext = createContext();
@@ -23,6 +23,15 @@ export function TaskProvider({ children }) {
             setTasks(res.data);
         } catch (error) {
             console.log(error)
+        }
+    };
+
+    const getAllTasks = async () => {
+        try {
+            const res = await getAllTasksRequest();
+            setTasks(res.data);
+        } catch (error) {
+            console.log(error);
         }
     };
 
@@ -60,7 +69,7 @@ export function TaskProvider({ children }) {
     };
 
     return(
-        <TaskContext.Provider value={{tasks, createTask, getTasks, deleteTask, getTask, updateTask}}>
+        <TaskContext.Provider value={{tasks, createTask, getTasks, deleteTask, getTask, updateTask, getAllTasks}}>
             { children }
         </TaskContext.Provider>
     );
