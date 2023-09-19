@@ -1,4 +1,4 @@
-import { techRegister, register, login, logout, profile, verifyToken } from '../Controllers/auth.controller.js';
+import { techRegister, register, techLogin, login, logout, profile, verifyToken } from '../Controllers/auth.controller.js';
 import { techRegisterSchema, registerSchema, loginSchema } from '../Schemas/auth.schema.js';
 import { validateSchema } from '../Middlewares/validator.middleware.js';
 
@@ -8,6 +8,8 @@ import { Router } from "express";
 const router = Router();
 
 router.post('/login', validateSchema(loginSchema), login);
+
+router.post('/techLogin', validateSchema(loginSchema), techLogin);
 
 router.post('/logout', logout);
 

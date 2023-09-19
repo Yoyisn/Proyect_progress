@@ -4,33 +4,33 @@ import { useForm } from "react-hook-form";
 
 import { useEffect } from "react";
 
-function LoginPage() {
+function TechLogin() {
 
-  const {register, handleSubmit, formState: {errors}} = useForm();
+    const { tecnicoSignin, isAuthenticated, errors: signinErrors } = useAuth();
 
-  const {signin, isAuthenticated, errors: signinErrors } = useAuth();
+    const {register, handleSubmit, formState: {errors}} = useForm();
+    
+    const navigate = useNavigate();
 
-  const navigate = useNavigate();
+    const onSubmit = handleSubmit((data) => {
+      tecnicoSignin(data);
+      });
 
-  const onSubmit = handleSubmit((data) => {
-    signin(data);
-  });
+    useEffect(() => {
+        if(isAuthenticated) navigate("/techProfile");
+    }, [isAuthenticated]);
 
-  useEffect(() => {
-    if(isAuthenticated) navigate("/tasks");
-  }, [isAuthenticated]);
-
-    return (
+    return(
         <>
-          <div className="flex h-[calc(100vh-100px)] items-center justify-center">
+            <div className="flex h-[calc(100vh-100px)] items-center justify-center">
             <div className="bg-zinc-800 max-w-md w-full p-10 rounded-md">
             {
               signinErrors.map((error, i) => {
               <div key={i} className="bg-red-500 p-2 text-white text-center my-2"> { error } </div>
             })
-          }
+            }
 
-              <h1 className="text-3xl font-bold my-2"> LOGIN </h1>
+              <h1 className="text-3xl font-bold my-2"> TECHNICAL LOGIN </h1>
 
             <form onSubmit={ onSubmit }>
 
@@ -47,16 +47,15 @@ function LoginPage() {
              </form>
 
              <p className="flex gap-x-2 justify-between">
-               Don't have you an account? <Link className="text-sky-500" to="/register"> Sign up </Link>
+               Don't have you an technical account?
              </p>
 
-             <strong>Are you the Technical? you can login here: </strong>
-             <button className="bg-sky-500 text-white px-4 py-2 rounded-md my-2"> <Link to="/techLogin">Technical Login</Link> </button>
+            <button className="bg-sky-500 text-white px-4 py-2 rounded-md my-2"> <Link to="/techRegister"> Sign up </Link> </button>
 
             </div>
           </div>
         </>
-    )
-}
+    );
+};
 
-export default LoginPage;
+export default TechLogin;

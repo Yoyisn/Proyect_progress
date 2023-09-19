@@ -53,6 +53,9 @@ function RegisterPage() {
               Already have an account? <Link className="text-sky-500" to="/login"> Login </Link>
           </p>
 
+          <strong>Do you want to be a Technical?</strong>
+          <button className="bg-sky-500 text-white px-4 py-2 rounded-md my-2"> <Link to="/techRegister"> Click me </Link> </button>
+
           </div>
       </div>  
         </>

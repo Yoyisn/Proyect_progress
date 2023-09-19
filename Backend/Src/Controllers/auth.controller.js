@@ -101,6 +101,34 @@ export const login = async (req, res) => {
     }
 };
 
+export const techLogin = async (req, res) => {
+    const { email, password } = req.body;
+
+    try {
+
+        const techFound = await Tecnico.findOne({email});
+        if (!techFound) return res.status(400).json({ message: "User not found" });
+
+        const isMath = await bcrypt.compare(password, techFound.password);
+        if (!isMath) return res.status(400).json({ message: "Incorrect Password" });
+
+        const token = await createAccessToken({ id: techFound._id });
+        
+        res.cookie("token", token);
+
+        res.json({
+            id: techFound._id,
+            username: techFound.username,
+            email: techFound.email,
+            createAt: techFound.createdAt,
+            updateAt: techFound.updateAt,
+        });
+       
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+
 export const logout = async (req, res) => {
     res.cookie('token', "", {
         expires: new Date(0)

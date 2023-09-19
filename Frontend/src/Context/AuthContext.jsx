@@ -1,4 +1,4 @@
-import { registerTecnicoRequest, registerRequest, loginRequest, verifyTokenRequest } from "../Api/auth";
+import { registerTecnicoRequest, registerRequest, loginTecnicoRequest, loginRequest, verifyTokenRequest } from "../Api/auth";
 import { createContext, useState, useContext, useEffect } from "react";
 import Cookies from 'js-cookie';
 
@@ -14,7 +14,7 @@ export const useAuth = () => {
 
 export const AuthProvider = ({ children }) => {
 
-    const [tecnico, setTecnico] = useState(null);
+    const [tecnicoo, setTecnico] = useState(null);
     const [user, setUser] = useState(null);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [errors, setErrors] = useState([]);
@@ -31,12 +31,12 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
-    const sigupTecnico = async (tecnico) => {
+    const sigupTecnico = async (tecnicoo) => {
         try {
-            const res = await registerTecnicoRequest(tecnico);
+            const res = await registerTecnicoRequest(tecnicoo);
             console.log(res.data);
-            setTecnico(res.data);
             setIsAuthenticated(true);
+            setTecnico(res.data);
         } catch (error) {
             setErrors(error.response.data);
         }
@@ -48,6 +48,20 @@ export const AuthProvider = ({ children }) => {
             console.log(res);
             setIsAuthenticated(true);
             setUser(res.data);
+        } catch (error) {
+            if(Array.isArray(error.response.data)) {
+                return setErrors(error.response.data);
+            }
+            setErrors([error.response.message]);
+        }
+    };
+
+    const tecnicoSignin = async (tecnicoo) => {
+        try {
+            const res = await loginTecnicoRequest(tecnicoo);
+            console.log(res.data);
+            setIsAuthenticated(true);
+            setTecnico(res.data);
         } catch (error) {
             if(Array.isArray(error.response.data)) {
                 return setErrors(error.response.data);
@@ -101,7 +115,7 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     return (
-        <AuthContext.Provider value={{ sigupTecnico, sigup, signin, logout, loading, user, isAuthenticated, errors }}>
+        <AuthContext.Provider value={{ sigupTecnico, sigup, tecnicoSignin, signin, logout, loading, user, isAuthenticated, errors }}>
             { children }
         </AuthContext.Provider>
     );

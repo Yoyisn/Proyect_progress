@@ -18,11 +18,11 @@ function NavBar() {
                     {isAuthenticated ? (
                         <>
                         <li>
-                            Welcome User {user.username}
+                            Bienvenido {user.username}
                         </li>
                         <li>
                             <Link className='bg-indigo-500 px-4 py-1 rounded-sm' 
-                            to='/add-task'> Añade una tarea </Link>
+                            to='/add-task'> Sube tu problema </Link>
                         </li>
                         <li>
                             <Link to='/' onClick={() => {

@@ -2,6 +2,8 @@ import { useTasks } from '../Context/TasksContext.jsx';
 import TaskCard from '../Components/TaskCard.jsx';
 import { useEffect } from 'react';
 
+import NavBar from '../Components/NavBar.jsx';
+
 function TasksPage() {
 
     const { getTasks, tasks } = useTasks();
@@ -10,11 +12,17 @@ function TasksPage() {
         getTasks();
     }, []);
 
-    if(tasks.length === 0) return (<h1> No hay tareas </h1>);
+    if(tasks.length === 0) return (
+        <div> 
+            <NavBar />  
+            <h1> No tienes problemas? Sube uno </h1> 
+        </div> 
+    );
 
     return(
         <>
-          <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-2'>
+        <NavBar />
+        <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-2'>
             {
                 tasks.map(task => (
                     <TaskCard task={task} key={task._id}/>
