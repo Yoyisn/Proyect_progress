@@ -17,11 +17,12 @@ function TechLogin() {
       });
 
     useEffect(() => {
-        if(isAuthenticated) navigate("/techProfile");
+        if(isAuthenticated) navigate("/comunityProblems");
     }, [isAuthenticated]);
 
     return(
         <>
+          <h1> <Link to='/'> ServiTech </Link> </h1>
             <div className="flex h-[calc(100vh-100px)] items-center justify-center">
             <div className="bg-Darkred max-w-md w-full p-10 rounded-md">
             {

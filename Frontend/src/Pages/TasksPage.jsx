@@ -3,6 +3,7 @@ import TaskCard from '../Components/TaskCard.jsx';
 import { useEffect } from 'react';
 
 import NavBar from '../Components/NavBar.jsx';
+import { Link } from 'react-router-dom';
 
 function TasksPage() {
 
@@ -22,13 +23,18 @@ function TasksPage() {
     return(
         <>
         <NavBar />
-        <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-2'>
+
+        <strong> <Link to='/comunityProblems'> == Podras ver tus problemas subidos conmigo, clic me! == </Link> </strong>
+
+        <br />
+
+        <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-2 mt-2'>
             {
                 tasks.map(task => (
                     <TaskCard task={task} key={task._id}/>
                 ))
             }
-          </div>   
+          </div> 
         </>
     );
 };
