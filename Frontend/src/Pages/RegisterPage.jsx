@@ -22,11 +22,11 @@ function RegisterPage() {
       <h1> <Link to='/'> ServiTech </Link> </h1>
       <div className="flex h-[calc(100vh-100px)] items-center justify-center">
         <div className="bg-Darkred max-w-md p-10 rounded-md">
-          {/*
+          {
             registerErrors.map((error, i) => {
               <div key={i} className="bg-red-500 p-2 text-white text-center"> { error } </div>
             })
-          */}
+          }
 
           <h1 className="text-3xl font-bold my-2"> Register </h1>
 
@@ -50,12 +50,13 @@ function RegisterPage() {
 
           </form>
 
+        <Link to="/login">
           <p className="flex gap-x-2 justify-between">
-              Already have an account? <Link className="text-Bgblue" to="/login"> Login </Link>
+              Already have an account? CLICK ME
           </p>
+        </Link>
 
-          <strong>Do you want to be a Technical?</strong>
-          <button className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-4 py-2 rounded-md my-2"> <Link to="/techRegister"> Click me </Link> </button>
+        <Link to="/techLogin"><strong>Do you want to be a Technical? CLICK ME</strong></Link>
 
           </div>
       </div>  

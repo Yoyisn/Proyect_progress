@@ -47,11 +47,11 @@ function TechLogin() {
 
              </form>
 
+            <Link to="/techRegister">
              <p className="flex gap-x-2 justify-between">
-               Don't have you an technical account?
+               Don't you have an technical account?
              </p>
-
-            <button className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-4 py-2 rounded-md my-2"> <Link to="/techRegister"> Sign up </Link> </button>
+            </Link> 
 
             </div>
           </div>

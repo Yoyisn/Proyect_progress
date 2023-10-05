@@ -59,10 +59,12 @@ function TechRegisterPage() {
 
           </form>
 
+        <Link to="/techLogin">
           <p className="flex gap-x-2 justify-between">
-              <strong>Already have an Technical account? you can login here:</strong> 
+              <strong>Already have an Technical account? log with me</strong> 
           </p>
-          <button className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-4 py-2 rounded-md my-2"><Link to="/techLogin"> Login </Link></button>
+        </Link>  
+        
           </div>
       </div> 
     </>

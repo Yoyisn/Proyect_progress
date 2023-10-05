@@ -168,30 +168,8 @@ export const verifyToken = async (req, res) => {
     const {token} = req.cookies;
     if(!token) return res.status(401),json({message: "Inautorizado"});
 
-    jwt.verify(token, TOKEN_SECRET, async (err, user, tecnico) => {
+    jwt.verify(token, TOKEN_SECRET, async (err, user) => {
         if (err) return res.status(401).json({ message: "Inautorizado" });
-
-        /*
-        const userFound = await User.findById(user.id);
-        const techFound = await Tecnico.findById(tecnico.id);
-
-    
-        if (userFound) {
-            return res.json({
-                id: userFound._id,
-                username: userFound.username,
-                email: userFound.email,
-            });
-        }
-
-        if (techFound) {
-            return res.json({
-                id: techFound._id,
-                username: techFound.username,
-                email: techFound.email,
-            });
-        }
-        */
         
         const userFound = await User.findById(user.id);
         if (!userFound) return res.status(401).json({ message: "Inautorizado" });

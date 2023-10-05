@@ -25,11 +25,11 @@ function LoginPage() {
           <h1> <Link to='/'> ServiTech </Link> </h1>
           <div className="flex h-[calc(100vh-100px)] items-center justify-center">
             <div className="bg-Darkred max-w-md w-full p-10 rounded-md">
-            {/*
+            {
               signinErrors.map((error, i) => {
               <div key={i} className="bg-red-500 p-2 text-white text-center my-2"> { error } </div>
             })
-            */}
+            }
 
               <h1 className="text-3xl font-bold my-2"> LOGIN </h1>
 
@@ -47,12 +47,13 @@ function LoginPage() {
 
              </form>
 
+            <Link to="/register">
              <p className="flex gap-x-2 justify-between">
-               Don't have you an account? <Link className="text-Bgblue" to="/register"> Sign up </Link>
+               Don't have you an account? CLICK ME
              </p>
+            </Link>
 
-             <strong>Are you the Technical? you can login here: </strong>
-             <button className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-4 py-2 rounded-md my-2"> <Link to="/techLogin">Technical Login</Link> </button>
+             <Link to="/techLogin"><strong>Are you the Technical? CLICK ME</strong></Link>
 
             </div>
           </div>
