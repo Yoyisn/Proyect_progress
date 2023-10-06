@@ -51,6 +51,7 @@ function App() {
               <Route path="/tasks/:id" element={ <TaskFormPage /> } />
 
               <Route path="/profile" element={ <ProfilePage /> } />
+              
             </Route>
 
             </Routes>

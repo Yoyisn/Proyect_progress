@@ -1,6 +1,5 @@
 import { useAuth } from '../Context/AuthContext';
-import { useNavigate } from 'react-router-dom';
-import { useEffect } from "react";
+import { Link } from 'react-router-dom';
 
 function ProfilePage() {
 
@@ -8,15 +7,15 @@ function ProfilePage() {
     const {user, isAuthenticated} = useAuth();
     console.log(user);
 
-    const navigate = useNavigate();
-
-    useEffect(() => {
-        if(isAuthenticated) navigate("/profile");
-      }, [isAuthenticated]);
-
 
     return(
-        <div>ProfilePage</div>
+      <>
+        <div>
+          <Link to="/tasks"> <h2> Ver o subir tus problemas </h2> </Link>
+          
+          <strong> Perfil Usuario </strong>
+        </div>
+      </>
     );
 };
 

@@ -14,7 +14,7 @@ function TechRegisterPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if(isAuthenticated) navigate("/comunityProblems");
+    if(isAuthenticated) navigate("/techProfile");
   }, [isAuthenticated]);
 
   return (

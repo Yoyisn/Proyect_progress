@@ -17,7 +17,7 @@ function TechLogin() {
       });
 
     useEffect(() => {
-        if(isAuthenticated) navigate("/comunityProblems");
+        if(isAuthenticated) navigate("/techProfile");
     }, [isAuthenticated]);
 
     return(

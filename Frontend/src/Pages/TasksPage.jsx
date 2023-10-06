@@ -24,7 +24,7 @@ function TasksPage() {
         <>
         <NavBar />
 
-        <strong> <Link to='/comunityProblems'> == Podras ver tus problemas subidos conmigo, clic me! == </Link> </strong>
+        <Link to='/comunityProblems'><strong>== Podras ver tus problemas subidos conmigo, clic me! ==</strong></Link>
 
         <br />
 
