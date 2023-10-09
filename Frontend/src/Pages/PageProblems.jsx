@@ -1,5 +1,5 @@
+import GeneralTasksCard from '../Components/GeneralTasksCard.jsx';
 import { useTasks } from '../Context/TasksContext.jsx';
-import TaskCard from '../Components/TaskCard.jsx';
 import { useEffect } from 'react';
 
 function PageProblems() {
@@ -15,7 +15,7 @@ function PageProblems() {
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-2 mt-6'>
             {
                 tasks.map(task => (
-                    <TaskCard task={task} key={task._id}/>
+                    <GeneralTasksCard task={task} key={task._id}/>
                 ))
             }
           </div>   
