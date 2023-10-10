@@ -1,4 +1,4 @@
-import { createAccessToken } from '../Libs/jwt.js';
+ import { createAccessToken } from '../Libs/jwt.js';
 import User from '../Models/user.model.js';
 import bcrypt from 'bcryptjs';
 

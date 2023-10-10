@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function ProfilePage() {
 
 
-    const {user, isAuthenticated} = useAuth();
+    const {user} = useAuth();
     console.log(user);
 
 
@@ -13,7 +13,7 @@ function ProfilePage() {
         <div>
           <Link to="/tasks"> <h2> Ver o subir tus problemas </h2> </Link>
           
-          <strong> Perfil Usuario </strong>
+          <strong> Bienvenido { user.username }</strong>
         </div>
       </>
     );

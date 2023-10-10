@@ -15,7 +15,7 @@ function PageProblems() {
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-2 mt-6'>
             {
                 tasks.map(task => (
-                    <GeneralTasksCard task={task} key={task._id}/>
+                    <GeneralTasksCard task={task} key={task._id} />
                 ))
             }
           </div>   

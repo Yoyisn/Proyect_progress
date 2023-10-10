@@ -1,11 +1,15 @@
+//import { useAuth } from '../Context/AuthContext';
 import utc from 'dayjs/plugin/utc';
 import dayjs from 'dayjs';
 
 dayjs.extend(utc);
 function GeneralTasksCard({ task }) {
+
+  //const {user} = useAuth();
+  console.log(task.user);
   return (
     <>
-    <div className="bg-zinc-800 max-w-md 
+          <div className="bg-zinc-800 max-w-md 
            w-full p-10 rounded-md">
                 <header className="flex justify-between">
                 <h1 className="text-2xl font-bold">Problema: { task.title }</h1>
