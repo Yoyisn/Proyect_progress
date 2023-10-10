@@ -8,7 +8,7 @@ import CardsContainer from "../Components/CardsContainer.jsx";
 function HomePage() {
     return (
         <> 
-
+      <div className="border-solid border-4 border-Darkred mt-10 rounded-md">
         <NavBar />
         <div className="sm:flex sm:gap-8">
           {" "}
@@ -28,7 +28,7 @@ function HomePage() {
 
         </div>
         {/* <CardsContainer /> */}
-        
+      </div>  
         </>
     );
 };
