@@ -12,7 +12,7 @@ function NavBar() {
                 <Link to={
                     isAuthenticated ? "/tasks" : "/"
                 }>
-                    <h1 className="text-2xl font-bold"> ServiTech </h1>
+                    <h1 className="text-2xl font-abc"> ServiTech </h1>
                 </Link>
                 <ul className="flex gap-x-2">
                     {isAuthenticated ? (
@@ -33,11 +33,11 @@ function NavBar() {
                     ) : (
                         <>
                         <li>
-                            <Link className='bg-Grayishblue hover:bg-Brown hover:text-Grayishblue px-4 py-1 rounded-sm' 
+                            <Link className='bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-Bgblue px-4 py-1 rounded-sm' 
                             to='/login'> Login </Link>
                         </li>
                          <li>
-                            <Link className='bg-Grayishblue hover:bg-Brown hover:text-Grayishblue px-4 py-1 rounded-sm' 
+                            <Link className='bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-Bgblue px-4 py-1 rounded-sm' 
                             to='/register'> Register </Link>
                         </li>
                     </>

@@ -3,13 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      // fontFamily: {
-      //   'sans': ['ui-sans-serif'],
-      //   'serif': ['ui-serif'],
-      //   'mono': ['ui-monospace'],
-      //   'display': ['Oswald'],
-      //   'body': ['"Open Sans"'],
-      // },
+      fontFamily: {
+        'abc': [""],
+      },
       colors:{
         'Softorange': 'hsl(35, 77%, 62%)',
         'Softred': 'hsl(5, 85%, 63%)',

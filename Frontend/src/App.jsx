@@ -24,7 +24,7 @@ function App() {
     <AuthProvider>
       <TaskProvider>
         <BrowserRouter>
-          <main className="container mx-auto px-10">
+          <main className="container mx-auto px-5">
             <Routes>
           
             <Route path="/" element={ <HomePage /> } />

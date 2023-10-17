@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 import MainArticle from "../Components/MainArticle.jsx"
 import TecContainter from "../Components/TecContainer.jsx"
-import CardsContainer from "../Components/CardsContainer.jsx";
+// import CardsContainer from "../Components/CardsContainer.jsx";
 
 function HomePage() {
     return (
         <> 
-      <div className="border-solid border-4 border-Darkred mt-10 rounded-md">
+      <div className="shadow-inner hover:shadow-lg px-5 shadow-Darkred py-5 mt-10 rounded-md">
         <NavBar />
         <div className="sm:flex sm:gap-8">
           {" "}
