@@ -25,13 +25,13 @@ function LoginPage() {
 
   return (
     <>
-      <div className="pt-20">
-        <h1 className="flex font-abc text-6xl  justify-center">
+      <div className="">
+        <h1 className="flex font-abc text-6xl translate-y-[140px] justify-center">
           {" "}
           <Link to="/"> ServiTech </Link>{" "}
         </h1>
         <div className="flex h-[calc(100vh-100px)] items-center justify-center">
-          <div className="bg-Darkred max-w-md w-full p-10 rounded-md">
+          <div className="bg-Darkred max-w-md w-full p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black mt-10 rounded-md">
             {signinErrors.map((error, i) => {
               <div
                 key={i}

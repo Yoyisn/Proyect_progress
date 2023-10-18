@@ -19,9 +19,9 @@ function RegisterPage() {
 
     return (
         <>
-      <h1> <Link to='/'> ServiTech </Link> </h1>
+      <h1 className="flex font-abc text-6xl translate-y-[140px] justify-center"> <Link to='/'> ServiTech </Link> </h1>
       <div className="flex h-[calc(100vh-100px)] items-center justify-center">
-        <div className="bg-Darkred max-w-md p-10 rounded-md">
+        <div className="bg-Darkred max-w-md p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black mt-10 rounded-md">
           {
             registerErrors.map((error, i) => {
               <div key={i} className="bg-red-500 p-2 text-white text-center"> { error } </div>

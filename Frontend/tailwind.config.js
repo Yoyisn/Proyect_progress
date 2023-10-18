@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'abc': [""],
+        'abc': ["Germania "],
       },
       colors:{
         'Softorange': 'hsl(35, 77%, 62%)',
@@ -17,6 +17,7 @@ export default {
         'Tred': 'rgb(232, 69, 69)',
         'Darkred': 'rgb(144, 55, 73)',
         'Brown': 'rgb(83, 53, 74)',
+        'Bgbluelow': 'rgb(43, 46, 68)',
       }
     },
   },

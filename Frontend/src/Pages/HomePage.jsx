@@ -6,17 +6,17 @@ import TecContainter from "../Components/TecContainer.jsx"
 // import CardsContainer from "../Components/CardsContainer.jsx";
 
 function HomePage() {
-    return (
-        <> 
-      <div className="shadow-inner hover:shadow-lg px-5 shadow-Darkred py-5 mt-10 rounded-md">
+  return (
+    <>
+      <div className="shadow-inner hover:shadow-lg px-5 shadow-black hover:shadow-black py-5 mt-10 rounded-md bg-Bgblue">
         <NavBar />
         <div className="sm:flex sm:gap-8">
           {" "}
-          <MainArticle />          
+          <MainArticle />
           <TecContainter />
-          
 
-        {/* <strong> Eres el tecnico? Registrate: </strong>
+
+          {/* <strong> Eres el tecnico? Registrate: </strong>
         <button>
           <Link to="/techRegister"> Click me </Link>
         </button>
@@ -28,9 +28,9 @@ function HomePage() {
 
         </div>
         {/* <CardsContainer /> */}
-      </div>  
-        </>
-    );
+      </div>
+    </>
+  );
 };
 
 export default HomePage;

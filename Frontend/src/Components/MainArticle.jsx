@@ -22,7 +22,7 @@ const MainArticle = () => {
              text-Grayishblue font-bold">
               Registrate y pide a los tecnicos certificados de tu localidad, puedes mirar en todos los tecnicos posibles al que se adapte mejor a tu solución, tambien puedes pasarte por el catalogo de productos tecnologicos certificados; ¡pide y te llegará a tu casa!
             </p>
-            <button className=" bg-Darkred w-[185px] h-[48px] uppercase text-Offwhite hover:bg-Brown font-bold shadow-lg shadow-Brown " >
+            <button className=" bg-Darkred w-[185px] h-[48px] uppercase text-Offwhite hover:bg-Brown font-bold shadow-lg shadow-Brown rounded-md" >
               ¡More info¡
             </button>
           </div>
