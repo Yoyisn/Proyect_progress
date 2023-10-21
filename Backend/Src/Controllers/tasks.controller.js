@@ -22,11 +22,12 @@ export const getTasks = async (req, res) => {
 
 export const createTask = async (req, res) => {
     try {
-        const { title, description, date } = req.body;
+        const { title, description, dispositive, date } = req.body;
 
     const newTask = new Task({
         title,
         description,
+        dispositive,
         date,
         user: req.user.id
     });

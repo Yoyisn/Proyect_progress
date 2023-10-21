@@ -61,6 +61,10 @@ function TaskFormPage() {
                      rows="3" placeholder='Description' {...register("description")} 
                      autoFocus></textarea>
 
+                     <label>Digite su tipo de equipo:</label>
+                     <input type='text' placeholder='Movil, tv, pc portil, pc de mesa, otro...'
+                     className='w-full  bg-zinc-700 text-white px-4 py-2 rounded-md my-2'{...register("dispositive")}/>
+
                     <label htmlFor='date'> Date </label>
                     <input className='w-full  bg-zinc-700 text-white px-4 py-2 rounded-md my-2'
                      type='date' {...register('date')}/>

@@ -9,6 +9,10 @@ const taskSchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
+    dispositive: {
+      type: String,
+      required: true,
+    },
     description: {
         type: String,
         required: true,

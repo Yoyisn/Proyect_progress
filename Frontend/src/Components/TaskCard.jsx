@@ -26,6 +26,7 @@ function TaskCard({ task }) {
                  </div>
                 </header>
                 <p className="text-slate-300">Descripcion del problema: {task.description}</p>
+                <strong>Tipo de equipo: { task.dispositive }</strong>
                 <p> Publicado el: { dayjs(task.date).utc().format('DD/MM/YYYY') }</p>
             </div>
         </>
