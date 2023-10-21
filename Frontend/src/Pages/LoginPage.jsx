@@ -3,6 +3,7 @@ import { useAuth } from "../Context/AuthContext";
 import { useForm } from "react-hook-form";
 
 import { useEffect } from "react";
+import Logo from "../assets/assets/images/image.png";
 
 function LoginPage() {
   const {
@@ -29,7 +30,13 @@ function LoginPage() {
         <h1 className="flex font-abc text-6xl translate-y-[140px] justify-center">
           {" "}
           <Link to="/"> ServiTech </Link>{" "}
+          <img
+            className="flex h-[60px]"
+            src={Logo}
+            alt="Logo Servitecnicos"
+          />
         </h1>
+
         <div className="flex h-[calc(100vh-100px)] items-center justify-center">
           <div className="bg-Darkred max-w-md w-full p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black mt-10 rounded-md">
             {signinErrors.map((error, i) => {
