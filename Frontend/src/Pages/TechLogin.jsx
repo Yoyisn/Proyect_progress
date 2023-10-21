@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 
 import { useEffect } from "react";
 import Logo from "../assets/assets/images/image.png";
+import Footer from "../Components/Footer";
 
 
 function TechLogin() {
@@ -81,6 +82,7 @@ function TechLogin() {
           </Link>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 import { useNavigate, Link } from 'react-router-dom';
 import Logo from "../assets/assets/images/image.png";
+import Footer from "../Components/Footer";
 
 
 function RegisterPage() {
@@ -92,6 +93,7 @@ function RegisterPage() {
           </Link>
         </div>
       </div>
+        <Footer />
     </>
   );
 }

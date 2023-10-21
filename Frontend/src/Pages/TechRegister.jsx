@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from "react";
 import Logo from "../assets/assets/images/image.png";
+import Footer from "../Components/Footer";
 
 
 function TechRegisterPage() {
@@ -107,6 +108,7 @@ function TechRegisterPage() {
           </Link>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

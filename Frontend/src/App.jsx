@@ -17,6 +17,7 @@ import TechProfilePage from './Pages/TechProfile';
 
 import PageProblems from "./Pages/PageProblems";
 import TechLogin from "./Pages/TechLogin";
+import Footer from "./Components/Footer";
 
 function App() {
   return(
@@ -25,6 +26,7 @@ function App() {
       <TaskProvider>
         <BrowserRouter>
           <main className="container mx-auto px-5">
+            
             <Routes>
           
             <Route path="/" element={ <HomePage /> } />

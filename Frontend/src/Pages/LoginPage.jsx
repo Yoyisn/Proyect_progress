@@ -1,9 +1,10 @@
+import Logo from "../assets/assets/images/image.png";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../Context/AuthContext";
-import { useForm } from "react-hook-form";
 
+import { useForm } from "react-hook-form";
+import Footer from "../Components/Footer";
 import { useEffect } from "react";
-import Logo from "../assets/assets/images/image.png";
 
 function LoginPage() {
   const {
@@ -87,8 +88,12 @@ function LoginPage() {
             <Link to="/techLogin">
               <strong>Are you the Technical? CLICK ME</strong>
             </Link>
+
           </div>
+
         </div>
+        <Footer />
+
       </div>
     </>
   );

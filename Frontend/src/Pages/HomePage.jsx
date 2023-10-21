@@ -1,8 +1,9 @@
 import NavBar from "../Components/NavBar.jsx";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import MainArticle from "../Components/MainArticle.jsx"
 import TecContainter from "../Components/TecContainer.jsx"
+
 // import CardsContainer from "../Components/CardsContainer.jsx";
 
 function HomePage() {
@@ -29,6 +30,7 @@ function HomePage() {
         </div>
         {/* <CardsContainer /> */}
       </div>
+        
     </>
   );
 };
