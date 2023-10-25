@@ -42,6 +42,15 @@ function NavBar() {
                             </li>
                             <li>
                                 <Link
+                                    className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-Bgblue px-4 py-1 rounded-md"
+                                    to="/profile"
+                                >
+                                    {" "}
+                                    Profile{" "}
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
                                     to="/"
                                     onClick={() => {
                                         logout();

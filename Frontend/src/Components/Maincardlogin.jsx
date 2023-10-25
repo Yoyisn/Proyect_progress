@@ -6,7 +6,7 @@ const Maincardlogin = () => {
         <>
             <div>
                 <article
-                    className="flex bg-white max-w-lg w-full transition hover:shadow-xl dark:bg-gray-900 dark:shadow-gray-800/25"
+                    className="flex max-w-lg w-full transition hover:shadow-xl bg-Bgblue shadow-Bgblue"
                 >
                     <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
                         <time

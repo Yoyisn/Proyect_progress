@@ -13,7 +13,7 @@ function ProfilePage() {
 
   return (
     <>
-      <div className='flex justify-between bg-Darkred max-w-7xl w-full p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black mt-10 rounded-md'>
+      <div className='flex justify-between bg-Darkred shadow-inner hover:shadow-lg shadow-black hover:shadow-black p-5 mt-10 rounded-md'>
         <ProfilesideBar />
 
         <div>
