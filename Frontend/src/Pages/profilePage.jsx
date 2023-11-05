@@ -17,7 +17,7 @@ function ProfilePage() {
 
   return (
     <>
-      <div className='flex max-h-[800px] justify-between bg-Darkred shadow-inner hover:shadow-lg shadow-black hover:shadow-black p-5 mt-10 rounded-md'>
+      <div className='flex max-h-[580px] justify-between bg-Darkred shadow-inner hover:shadow-lg shadow-black hover:shadow-black p-5 mt-10 rounded-md'>
         <ProfilesideBar />
 
         <div>
@@ -27,8 +27,7 @@ function ProfilePage() {
           <span className='text-1xl text-Grayishblue font-abc'>Se unio el: {dayjs(user.createAt).utc().format('DD/MM/YYYY')}</span>
 
         </div>
-        <div className='space-y-2'>
-          <Maincardlogin />
+        <div className='grid grid-rows-3 gap-2 overflow-y-auto scrollbar scrollbar-thumb-Grayishblue scrollbar-track-Darkgrayishblue'>
           <Maincardlogin />
 
         </div>

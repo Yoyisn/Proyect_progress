@@ -1,12 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content:
+    ["./index.html", "./src/**/*.{js,ts,jsx,tsx}",
+      "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       fontFamily: {
         'abc': ["Germania "],
       },
-      colors:{
+      colors: {
         'Softorange': 'hsl(35, 77%, 62%)',
         'Softred': 'hsl(5, 85%, 63%)',
         'Offwhite': 'hsl(36, 100%, 99%)',
@@ -21,5 +23,8 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+    require('flowbite/plugin'),
+  ],
 }

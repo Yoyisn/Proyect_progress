@@ -9,16 +9,16 @@ const Maincardlogin = () => {
 
   return (
     <>
-      <div className="grid grid-rows-2 hover:grid-rows-6">
+      <div className="">
         {tasks.map((task) => (
           <article
             key={task._id}
-            className="flex transition hover:shadow-xl bg-Bgblue shadow-Bgblue"
+            className="flex transition hover:shadow-xl bg-Bgblue shadow-Bgblue pb-4"
           >
             <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
-              <time className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900 dark:text-white">
+              <time className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-Grayishblue ">
                 <span>2022</span>
-                <span className="w-px flex-1 bg-gray-900/10 dark:bg-white/10"></span>
+                <span className="w-px flex-1 bg-gray-900/10 "></span>
                 <span>Oct 10</span>
               </time>
             </div>
@@ -34,16 +34,16 @@ const Maincardlogin = () => {
             <div className="flex flex-1 flex-col justify-between">
               <div className="border-s border-gray-900/10 p-4 sm:!border-l-transparent sm:p-6">
                 <Link to="">
-                  <h3 className="font-bold uppercase text-gray-900 dark:text-white">
+                  <h3 className="font-bold uppercase text-Grayishblue">
                     {task.title}
                   </h3>
                 </Link>
 
-                <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-700 dark:text-gray-200">
+                <p className="mt-2 line-clamp-3 text-sm/relaxed text-Grayishblue">
                   {task.description}
                 </p>
 
-                <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-700 dark:text-gray-200">
+                <p className="mt-2 line-clamp-3 text-sm/relaxed text-Grayishblue">
                   {task.dispositive}
                 </p>
               </div>
