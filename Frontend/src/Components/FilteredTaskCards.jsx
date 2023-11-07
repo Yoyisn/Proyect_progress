@@ -1,3 +1,4 @@
+import TimeAgo from './TimeAgo';
 import utc from 'dayjs/plugin/utc';
 import dayjs from 'dayjs';
 
@@ -13,7 +14,7 @@ function FilteredTaskCards({ tasks }) {
                 </header>
                 <p className="text-slate-300">Descripcion del problema: {tasks.description}</p>
                 <strong>Tipo de equipo: {tasks.dispositive}</strong>
-                <p> Publicado el: {dayjs(tasks.date).utc().format('DD/MM/YYYY')}</p>
+                <p> Publicado hace: <TimeAgo date={tasks.date}/></p>
         </div>
     </>
   );
