@@ -15,9 +15,9 @@ import { TaskProvider } from "./Context/TasksContext";
 import TechRegisterPage from "./Pages/TechRegister";
 import TechProfilePage from './Pages/TechProfile';
 
+import PageProblemsTechs from "./Pages/PageProblemsTechs";
 import PageProblems from "./Pages/PageProblems";
 import TechLogin from "./Pages/TechLogin";
-import Footer from "./Components/Footer";
 
 function App() {
   return(
@@ -45,6 +45,8 @@ function App() {
               <Route path="/techProfile" element={ <TechProfilePage/> }/>
 
               <Route path="/comunityProblems" element={ <PageProblems/> }/>
+
+              <Route path="/comunityProblemsTechs" element={ <PageProblemsTechs/> }/>
 
               <Route path="/tasks" element={ <TasksPage /> } />
 

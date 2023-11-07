@@ -2,11 +2,11 @@ import Logo from "../assets/assets/images/image.png";
 import { useAuth } from '../Context/AuthContext';
 import { Link } from "react-router-dom";
 
-function NavBar() {
+function NavBarTechs() {
 
-    const { isAuthenticated, logout, user } = useAuth();
+    const { isAuthenticated, logout, tecnicoo } = useAuth();
 
-    return (
+    return(
         <>
             <nav
                 className="bg-Darkred  my-3 flex 
@@ -14,7 +14,7 @@ function NavBar() {
             >
                 <ul className="flex gap-x-2">
                     <li>
-                        <Link to={isAuthenticated ? "/tasks" : "/"}>
+                        <Link to={isAuthenticated ? "/techProfile" : "/"}>
                             <h1 className="text-2xl font-abc"> ServiTech </h1>
                         </Link>
                     </li>
@@ -30,20 +30,11 @@ function NavBar() {
                 <ul className="flex gap-x-2">
                     {isAuthenticated ? (
                         <>
-                            <li>Bienvenido {user.username}</li>
+                            <li>Bienvenido {tecnicoo.email}</li>
                             <li>
                                 <Link
                                     className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-Bgblue px-4 py-1 rounded-md"
-                                    to="/add-task"
-                                >
-                                    {" "}
-                                    Sube tu problema{" "}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-Bgblue px-4 py-1 rounded-md"
-                                    to="/profile"
+                                    to="/techProfile"
                                 >
                                     {" "}
                                     Profile{" "}
@@ -89,4 +80,4 @@ function NavBar() {
     );
 };
 
-export default NavBar;
+export default NavBarTechs;

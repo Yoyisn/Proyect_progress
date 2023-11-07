@@ -1,10 +1,10 @@
 import FilterProblemCards from '../Components/FilterProblemCards.jsx';
+import NavBarTechs from '../Components/NavBarTechs.jsx';
 import { useTasks } from '../Context/TasksContext.jsx';
+
 import { useEffect } from 'react';
-
-import NavBar from '../Components/NavBar.jsx';
-
-function PageProblems() {
+ 
+function PageProblemsTechs() {
 
     const { getAllTasks} = useTasks();
 
@@ -12,12 +12,12 @@ function PageProblems() {
         getAllTasks();
     }, []);
 
-    return (
+    return(
         <>
-            <NavBar />
+            <NavBarTechs />
             <FilterProblemCards />
         </>
     );
 };
 
-export default PageProblems;
+export default PageProblemsTechs;
