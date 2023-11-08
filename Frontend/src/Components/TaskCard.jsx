@@ -1,9 +1,10 @@
+import { HiOutlineExclamationCircle } from 'react-icons/hi';
 import { useTasks } from "../Context/TasksContext";
 import { Link } from 'react-router-dom';
+
+import { Modal } from 'flowbite-react';
 import utc from 'dayjs/plugin/utc';
 import { useState } from "react";
-import { Modal } from 'flowbite-react';
-import { HiOutlineExclamationCircle } from 'react-icons/hi';
 
 import dayjs from 'dayjs';
 
@@ -36,7 +37,7 @@ function TaskCard({ task }) {
                                 <div className="text-center">
                                     <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-gray-400 dark:text-gray-200" />
                                     <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
-                                        Are you sure you want to delete this product?
+                                        Are you sure you want to delete this problem?
                                     </h3>
                                     <div className="flex justify-center gap-4">
                                     <button className="bg-red-500 hover:bg-red-600 text-white px-4
