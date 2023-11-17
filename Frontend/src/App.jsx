@@ -19,6 +19,7 @@ import PageProblems from "./Pages/PageProblems";
 import TechLogin from "./Pages/TechLogin";
 
 import PayLoads from "./Pages/PayLoads";
+import Quote from "./Pages/ToQuote";
 
 function App() {
   return(
@@ -59,6 +60,8 @@ function App() {
 
               <Route path="/payloads" element={ <PayLoads /> } />
               
+              <Route path="/toQuote" element={ <Quote /> } />
+
             </Route>
 
             </Routes>
