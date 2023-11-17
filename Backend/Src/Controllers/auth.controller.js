@@ -7,6 +7,7 @@ import { TOKEN_SECRET } from '../config.js';
 import jwt from 'jsonwebtoken';
 
 export const register = async (req, res) => {
+
     const { username, email, password } = req.body;
 
     try {
@@ -118,7 +119,7 @@ export const techLogin = async (req, res) => {
 
         res.json({
             id: techFound._id,
-            username: techFound.username,
+            name: techFound.name,
             email: techFound.email,
             createAt: techFound.createdAt,
             updateAt: techFound.updateAt,

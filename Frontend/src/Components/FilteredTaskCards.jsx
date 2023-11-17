@@ -1,5 +1,5 @@
-import TimeAgo from './TimeAgo';
 import utc from 'dayjs/plugin/utc';
+import TimeAgo from './TimeAgo';
 import dayjs from 'dayjs';
 
 dayjs.extend(utc);

@@ -6,6 +6,8 @@ function NavBarTechs() {
 
     const { isAuthenticated, logout, tecnicoo } = useAuth();
 
+    console.log(tecnicoo);
+
     return(
         <>
             <nav
@@ -30,7 +32,7 @@ function NavBarTechs() {
                 <ul className="flex gap-x-2">
                     {isAuthenticated ? (
                         <>
-                            <li>Bienvenido {tecnicoo.email}</li>
+                            <li>Bienvenido {tecnicoo.name}</li>
                             <li>
                                 <Link
                                     className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-Bgblue px-4 py-1 rounded-md"
