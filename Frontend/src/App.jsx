@@ -1,23 +1,24 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PageProblemsTechs from "./Pages/PageProblemsTechs";
+import { TaskProvider } from "./Context/TasksContext";
+
+import { AuthProvider } from "./Context/AuthContext";
 import RegisterPage from "./Pages/RegisterPage";
 import LoginPage from "./Pages/LoginPage";
 
-import { AuthProvider } from "./Context/AuthContext";
 import TaskFormPage from "./Pages/TaskFormPage";
 import TasksPage from "./Pages/TasksPage";
-
-
-import ProtectedRoute from "./ProtectedRoute";
-import ProfilePage from "./Pages/profilePage";
 import HomePage from "./Pages/HomePage";
 
-import { TaskProvider } from "./Context/TasksContext";
 import TechRegisterPage from "./Pages/TechRegister";
-import TechProfilePage from './Pages/TechProfile';
+import ProtectedRoute from "./ProtectedRoute";
+import ProfilePage from "./Pages/profilePage";
 
-import PageProblemsTechs from "./Pages/PageProblemsTechs";
+import TechProfilePage from './Pages/TechProfile';
 import PageProblems from "./Pages/PageProblems";
 import TechLogin from "./Pages/TechLogin";
+
+import PayLoads from "./Pages/PayLoads";
 
 function App() {
   return(
@@ -55,6 +56,8 @@ function App() {
               <Route path="/tasks/:id" element={ <TaskFormPage /> } />
 
               <Route path="/profile" element={ <ProfilePage /> } />
+
+              <Route path="/payloads" element={ <PayLoads /> } />
               
             </Route>
 
