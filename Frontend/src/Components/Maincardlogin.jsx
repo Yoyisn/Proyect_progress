@@ -3,9 +3,8 @@ import { useTasks } from "../Context/TasksContext";
 import { Link } from "react-router-dom";
 
 const Maincardlogin = () => {
+  
   const { tasks } = useTasks();
-
-  console.log(tasks);
 
   return (
     <>

@@ -6,16 +6,20 @@ import { useAuth } from '../Context/AuthContext';
 import TimeAgo from '../Components/TimeAgo';
 import utc from 'dayjs/plugin/utc';
 
+import { useTasks } from '../Context/TasksContext';
+import { useEffect } from 'react';
 import dayjs from 'dayjs';
 
 dayjs.extend(utc);
 
 function ProfilePage() {
 
-
+  const { getTasks } = useTasks();
   const { user } = useAuth();
-  console.log(user);
 
+  useEffect(() => {
+    getTasks()
+  }, []);
 
   return (
     <>
