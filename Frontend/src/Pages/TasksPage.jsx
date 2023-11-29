@@ -3,7 +3,7 @@ import TaskCard from '../Components/TaskCard.jsx';
 import { useEffect } from 'react';
 
 import NavBar from '../Components/NavBar.jsx';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 function TasksPage() {
 
@@ -24,7 +24,7 @@ function TasksPage() {
         <>
         <NavBar />
 
-        <Link to='/comunityProblems'><strong>== Podras ver tus problemas subidos conmigo, clic me! ==</strong></Link>
+        {/* <Link to='/comunityProblems'><strong>== Podras ver tus problemas subidos conmigo, clic me! ==</strong></Link> */}
 
         <br />
 

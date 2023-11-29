@@ -1,23 +1,23 @@
-import FilterProblemCards from '../Components/FilterProblemCards.jsx';
-import { useTasks } from '../Context/TasksContext.jsx';
-import { useEffect } from 'react';
+// import FilterProblemCards from '../Components/FilterProblemCards.jsx';
+// import { useTasks } from '../Context/TasksContext.jsx';
+// import { useEffect } from 'react';
 
-import NavBar from '../Components/NavBar.jsx';
+// import NavBar from '../Components/NavBar.jsx';
 
-function PageProblems() {
+// function PageProblems() {
 
-    const { getAllTasks} = useTasks();
+//     const { getAllTasks} = useTasks();
 
-    useEffect(() => {
-        getAllTasks();
-    }, []);
+//     useEffect(() => {
+//         getAllTasks();
+//     }, []);
 
-    return (
-        <>
-            <NavBar />
-            <FilterProblemCards />
-        </>
-    );
-};
+//     return (
+//         <>
+//             <NavBar />
+//             <FilterProblemCards />
+//         </>
+//     );
+// };
 
-export default PageProblems;
+// export default PageProblems;

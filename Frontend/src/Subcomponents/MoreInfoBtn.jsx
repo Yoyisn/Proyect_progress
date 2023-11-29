@@ -6,6 +6,8 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
+import imageMoreinfo from "../assets/assets/images/imageDomi3.avif";
+
 function MoreInfoBtn() {
   return (
     <>
@@ -19,25 +21,22 @@ function MoreInfoBtn() {
         <PopoverContent className="z-[999] grid w-[28rem] grid-cols-2 overflow-hidden p-0  bg-Grayishblue">
           <div className="p-4">
             <Typography color="blue-gray" className="mb-2 text-lg font-bold">
-              Material Tailwind
+              Somos Servitech
             </Typography>
             <Typography
               variant="small"
               color="gray"
               className="mb-14 font-normal text-blue-gray-800"
             >
-              Material Tailwind is an easy to use components library for
-              Tailwind CSS and Material Design. It features multiple React and
-              HTML components, all written with Tailwind CSS classes and
-              Material Design guidelines.
+              Mantenemos tus datos en total privacidad, ningun usuario ni tecnico sabra tu direccion, Servitech se encarga de recibir tu equipo y llevarlo con el tecnico apropiado, nos aseguramos de que tu equipo llegue en las condicionaes planteadas y si no tuvo solucion se entrega exactamente como se envia el equipo.
             </Typography>
-            
+
           </div>
 
-          <div className="min-h-full !w-full p-3">
+          <div className="h-[80%]  px-3 py-5">
             <img
-              src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVhbSUyMGJ1aWxkaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
-              alt="image"
+              src={imageMoreinfo}
+              alt="imageMoreinfo boton"
               className="h-full w-full rounded-lg object-cover"
             />
           </div>

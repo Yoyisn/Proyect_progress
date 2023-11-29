@@ -14,12 +14,12 @@ const CheckoutForm = () => {
   const stripe = useStripe();
   const elements = useElements();
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const {error, paymentMethod} = await stripe.createPaymentMethod({
+    const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: 'card',
-      card:  elements.getElement(CardElement),
+      card: elements.getElement(CardElement),
     });
 
     if (!error) {
@@ -29,9 +29,9 @@ const CheckoutForm = () => {
           id,
           amount: 1000,
         });
-  
+
         console.log(data);
-  
+
         elements.getElement(CardElement).clear();
       } catch (error) {
         console.log(error);
@@ -48,36 +48,43 @@ const CheckoutForm = () => {
 };
 
 function PayLoads() {
-  return(
+  return (
     <>
-   
-      <h1 className="flex font-abc text-6xl translate-y-[140px] justify-center">
-        <Link to="/techProfile"> ServiTech </Link>
-        <img
-          className="flex h-[60px]"
-          src={Logo}
-          alt="Logo Servitecnicos"
-        />
-      </h1>
+      <div className='shadow-inner hover:shadow-lg px-5 shadow-black hover:shadow-black py-5 mt-10 rounded-md bg-Darkred'>
 
-      <div className="flex h-[calc(100vh-100px)] items-center justify-center">
+        <h1 className="flex font-abc text-6xl translate-y-[140px] justify-center">
+          <Link to="/techProfile"> ServiTech </Link>
+          <img
+            className="flex h-[60px]"
+            src={Logo}
+            alt="Logo Servitecnicos"
+          />
+        </h1>
 
-        <img src= { imageRetroPc }/>  
+        <div className="flex h-[calc(100vh-100px)] items-center justify-center">
 
-        <div className="bg-Darkred max-w-md w-full p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black mt-10 rounded-md">
+          <img
+            
+            className="flex h-[39.5%] translate-y-[20px] rounded-l-lg shadow-inner hover:shadow-lg shadow-black hover:shadow-black"
+            src={imageRetroPc}
+            alt='Imagen compra subscripcion'
+          />
 
-          <h1 className="text-center text-3xl font-bold my-2"> Subscripcion Mensual </h1>
+          <div  className="bg-Bgblue max-w-2xl w-full p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black mt-10 rounded-r-lg">
 
-          <Elements stripe={stripePromise}>
-             <CheckoutForm /> 
-          </Elements>
+            <h1 className="text-center text-3xl font-bold my-2"> Subscripcion Mensual </h1>
 
-          <p className='text-center'> Subscripcion mensual a ServiTech, 30 dias </p>
+            <Elements stripe={stripePromise}>
+              <CheckoutForm />
+            </Elements>
 
-          <h3 className='text-center'>Precio: 10 US</h3>
+            <p className='text-center'> Subscripcion mensual a ServiTech, 30 dias </p>
 
+            <h3 className='text-center'>Precio: 10 US</h3>
+
+          </div>
         </div>
-      </div> 
+      </div>
     </>
   );
 };

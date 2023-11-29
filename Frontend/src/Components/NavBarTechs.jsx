@@ -11,7 +11,7 @@ function NavBarTechs() {
     return(
         <>
             <nav
-                className="bg-Darkred  my-3 flex 
+                className="bg-Bgblue  my-3 flex 
               justify-between py-5 px-10 rounded-lg shadow-inner hover:shadow-lg"
             >
                 <ul className="flex gap-x-2">
