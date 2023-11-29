@@ -104,4 +104,4 @@ const ProfilesideBar = () => {
     )
 }
 
-export default ProfilesideBar
+export default ProfilesideBar;
