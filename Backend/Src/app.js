@@ -1,10 +1,13 @@
+import paymentRoutes from './Routes/payment.routes.js';
 import taskRoutes from './Routes/tasks.routes.js';
 import authRoutes from './Routes/auth.routes.js';
-import cookieParser from "cookie-parser";
 
+import cookieParser from "cookie-parser";
 import express from "express";
 import morgan from "morgan";
+
 import cors from 'cors';
+
 
 export const app = express();
 
@@ -21,3 +24,4 @@ app.use(cookieParser());
 
 app.use("/api", authRoutes);
 app.use("/api", taskRoutes);
+app.use("/api", paymentRoutes);
