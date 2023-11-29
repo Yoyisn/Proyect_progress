@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+
+export default module.exports = withMT({
   content:
     ["./index.html", "./src/**/*.{js,ts,jsx,tsx}",
       "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}"],
@@ -7,6 +10,7 @@ export default {
     extend: {
       fontFamily: {
         'abc': ["Germania "],
+        
       },
       colors: {
         'Softorange': 'hsl(35, 77%, 62%)',
@@ -27,4 +31,4 @@ export default {
     require('tailwind-scrollbar'),
     require('flowbite/plugin'),
   ],
-}
+})

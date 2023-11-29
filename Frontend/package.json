@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@stripe/react-stripe-js": "^2.4.0",
     "@stripe/stripe-js": "^2.2.0",
+=======
+    "@material-tailwind/react": "^2.1.4",
+>>>>>>> 3ecd8d8dd5e087ddbf363dbc20d63b6e233c30e6
     "axios": "^1.4.0",
     "date-fns": "^2.30.0",
     "dayjs": "^1.11.9",
