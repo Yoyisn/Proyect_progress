@@ -2,7 +2,7 @@
 const Footer = () => {
   return (
     <>
-    <div className="border-t shadow-sm hover:shadow-lg border-gray-100 dark:border-Darkred translate-y-[-120px] pt-5">
+    <div className="border-t shadow-sm hover:shadow-lg border-gray-100 dark:border-Darkred pt-5">
           <ul className="flex flex-wrap gap-4 text-xs">
             <li>
               <a
