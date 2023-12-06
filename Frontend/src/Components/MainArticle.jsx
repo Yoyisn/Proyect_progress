@@ -1,16 +1,31 @@
 import MoreInfo from "../Subcomponents/MoreInfoBtn";
 import imageMobile from "../assets/assets/images/Tecnico.png";
 import imageDesktop from "../assets/assets/images/Tecnico.png";
+import imgMoto from "../assets/assets/images/imgMoto.png";
+import flecha from "../assets/assets/images/flecharoja.png";
+
+
 
 const MainArticle = () => {
   return (
     <>
       <section className="">
-        <picture className="flex py-10 h-[400px] m-[1px] justify-center">
-          <source media="(max-width: 640px)" srcSet={imageMobile} />
-          <source media="(min-width: 641px)" srcSet={imageDesktop} />
-          <img src={imageMobile} alt="Articulo principal img" />
-        </picture>
+        <div className="flex justify-between ">
+
+          <picture className="flex translate-x-8 py-10 h-[400px] m-[1px] ">
+            <source media="(max-width: 640px)" srcSet={imgMoto} />
+            <source media="(min-width: 641px)" srcSet={imgMoto} />
+            <img src={imgMoto} alt="Articulo principal img" />
+          </picture>
+
+          <img className="translate-y-[150px] h-[50px] m-2 " src={flecha} alt="flecha hacia la derecha" />
+
+          <picture className="flex py-10 h-[400px] m-[1px]">
+            <source media="(max-width: 640px)" srcSet={imageMobile} />
+            <source media="(min-width: 641px)" srcSet={imageDesktop} />
+            <img src={imageMobile} alt="Articulo principal img" />
+          </picture>
+        </div>
 
         <div className="sm:flex pb-3">
           <div className="flex-1 py-5 sm:py-5">

@@ -15,7 +15,7 @@ function NavBar() {
                 <ul className="flex gap-x-2">
                     <li>
                         <Link to={isAuthenticated ? "/profile" : "/"}>
-                            <h1 className="text-2xl font-abc"> ServiTech </h1>
+                            <h1 className="text-3xl font-abc"> ServiTech </h1>
                         </Link>
                     </li>
                     <li>

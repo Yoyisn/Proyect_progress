@@ -22,7 +22,8 @@ export default module.exports = withMT({
         'Bgblue': 'rgb(43, 46, 74)',
         'Tred': 'rgb(232, 69, 69)',
         'Darkred': 'rgb(144, 55, 73)',
-        'Brown': 'rgb(83, 53, 74)',
+        'Darkredlow': 'rgb(140, 50, 70)',
+        'Brown': 'rgb(83, 53, 80)',
         'Bgbluelow': 'rgb(43, 46, 68)',
       }
     },
@@ -30,5 +31,7 @@ export default module.exports = withMT({
   plugins: [
     require('tailwind-scrollbar'),
     require('flowbite/plugin'),
+    require('@tailwindcss/forms'),
+    
   ],
 })

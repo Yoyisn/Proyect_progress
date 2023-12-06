@@ -11,13 +11,13 @@ function NavBarTechs() {
     return(
         <>
             <nav
-                className="bg-Bgblue  my-3 flex 
+                className="bg-Bgbluelow  my-3 flex 
               justify-between py-5 px-10 rounded-lg shadow-inner hover:shadow-lg"
             >
                 <ul className="flex gap-x-2">
                     <li>
                         <Link to={isAuthenticated ? "/techProfile" : "/"}>
-                            <h1 className="text-2xl font-abc"> ServiTech </h1>
+                            <h1 className="text-3xl font-abc"> ServiTech </h1>
                         </Link>
                     </li>
                     <li>
