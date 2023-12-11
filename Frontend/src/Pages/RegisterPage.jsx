@@ -87,12 +87,12 @@ function RegisterPage() {
 
             <Link to="/login">
               <p className="flex gap-x-2 justify-between">
-                Already have an account? CLICK ME
+                Ya tienes una cuenta? CLICK ME
               </p>
             </Link>
 
             <Link to="/techLogin">
-              <strong>Do you want to be a Technical? CLICK ME</strong>
+              <strong>Quisieras ser Técnico? CLICK ME</strong>
             </Link>
           </div>
         </div>

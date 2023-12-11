@@ -80,7 +80,7 @@ function TechLogin() {
 
             <Link to="/techRegister">
               <p className="flex gap-x-2 justify-between">
-                Don't you have an technical account?
+                Aún no tienes tu cuenta de Técnico? CLICK ME
               </p>
             </Link>
           </div>

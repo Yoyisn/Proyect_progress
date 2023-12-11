@@ -1,4 +1,4 @@
-import userimg from '../assets/assets/images/userimage.jpg';
+import userimg2 from '../assets/assets/images/imageuserxbox.png';
 import ProfilesideBar from '../Components/ProfilesideBar';
 import Maincardlogin from '../Components/Maincardlogin';
 
@@ -28,7 +28,7 @@ function ProfilePage() {
         <div>
           {/*<Link to="/tasks"> <h2> Ver o subir tus problemas </h2> </Link>*/}
           <strong className='px-1 text-[10px] font-abc sm:text-[30px] leading-none text-Grayishblue'> Bienvenido {user.username}</strong>
-          <img className='py-5 h-[350px] m-[1px]' src={userimg} alt="imagen de perfil" />
+          <img className='py-5 h-[350px] m-[1px] rounded-full' src={userimg2} alt="imagen de perfil" />
           <span className='text-1xl text-Grayishblue font-abc'>Se unio el: {dayjs(user.createAt).utc().format('DD/MM/YYYY')} <br/> Hace: <TimeAgo date={user.createAt}/></span>
 
         </div>

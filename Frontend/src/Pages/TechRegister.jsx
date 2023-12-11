@@ -22,7 +22,7 @@ function TechRegisterPage() {
 
   return (
     <>
-      <h1 className="flex font-abc text-6xl translate-y-[110px] justify-center">
+      <h1 className="flex font-abc text-6xl translate-y-[140px] justify-center">
         {" "}
         <Link to="/"> ServiTech </Link>{" "}
         <img
@@ -36,7 +36,7 @@ function TechRegisterPage() {
 
         <div className="flex h-[calc(100vh-100px)] items-center justify-center">
 
-          <div className="bg-Bgblue max-w-md p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black mt-10 rounded-md overflow-y-scroll max-h-[650px]">
+          <div className="bg-Bgblue max-w-md p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black mt-10 rounded-md overflow-y-scroll max-h-[700px] scrollbar scrollbar-thumb-Grayishblue scrollbar-track-Darkgrayishblue">
             {registerErrors.map((error, i) => {
               <div key={i} className="bg-Softorange p-2 text-black text-center">
                 {" "}
@@ -198,7 +198,7 @@ function TechRegisterPage() {
 
             <Link to="/techLogin">
               <p className="flex gap-x-2 justify-between">
-                <strong>Already have an Technical account? log with me</strong>
+                <strong>Ya tienes una cuenta de Técnico? Inicia sesión CLICK ME</strong>
               </p>
             </Link>
           </div>

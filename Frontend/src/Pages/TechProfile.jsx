@@ -52,7 +52,7 @@ function TechProfilePage() {
                     <div>
 
                         <strong className='px-1 text-[10px] font-abc sm:text-[30px] leading-none text-Grayishblue'> Bienvenido {tecnicoo.name}</strong>
-                        <img className='py-5 h-[350px] m-[1px]' src={multiTec} alt="imagen de perfil" />
+                        <img className='py-5 h-[350px] m-[1px] rounded-full' src={multiTec} alt="imagen de perfil" />
                         <span className='text-1xl text-Grayishblue font-abc'>Se unio el: {dayjs(tecnicoo.createAt).utc().format('DD/MM/YYYY')} <br /> Hace: <TimeAgo date={tecnicoo.createAt} /></span>
 
                     </div>

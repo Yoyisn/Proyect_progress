@@ -14,7 +14,7 @@ function MoreInfoBtn() {
       <Popover>
         <PopoverHandler >
           <Button className="bg-Darkred w-[185px] h-[48px] uppercase text-Offwhite hover:bg-Brown font-bold shadow-lg shadow-Brown rounded-md">
-            MAS INFORMACION
+            MAS INFORMACIÓN
           </Button>
         </PopoverHandler>
 
@@ -28,7 +28,7 @@ function MoreInfoBtn() {
               color="gray"
               className="mb-14 text-xl text-blue-gray-800"
             >
-              Mantenemos tus datos en total privacidad, ningun usuario ni tecnico sabra tu direccion, Servitech se encarga de recibir tu equipo y llevarlo con el tecnico apropiado, nos aseguramos de que tu equipo llegue en las condicionaes planteadas y si no tuvo solucion se entrega exactamente como se envia el equipo.
+              Mantenemos tus datos en total privacidad, ningún usuario ni técnico sabra tu dirección, Servitech se encarga de recibir tu equipo y llevarlo con el técnico apropiado, nos aseguramos de que tu equipo llegue en las condiciones planteadas y si no tuvo solución se entrega exactamente como se envia el equipo.
             </Typography>
 
           </div>

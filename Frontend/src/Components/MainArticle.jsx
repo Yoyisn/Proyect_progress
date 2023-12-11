@@ -30,13 +30,13 @@ const MainArticle = () => {
         <div className="sm:flex pb-3">
           <div className="flex-1 py-5 sm:py-5">
             <h2 className="px-1 text-[30px] font-bold sm:text-[40px] leading-none text-Grayishblue">
-              ¡Revive tus equipos con<br />los mejores tecnicos de la Web!
+              ¡Revive tus equipos con<br />los mejores técnicos de la Web!
             </h2>
           </div>
           <div className="flex-1 py-2 sm:py-9">
             <p className=" text-[13px] mb-10 sm:text-[15px]
              text-Grayishblue font-bold">
-              Registrate y pide solucion a tus problemas técnicos, miraremos en nuestro catalogo de técnicos al que se adapte mejor a tu solución, paga como necesites y espera tu equipo; ¡pide y te llegará a tu casa!
+              Registrate y pide solución a tus problemas técnicos, miraremos en nuestro catalogo de técnicos al que se adapte mejor a tu solución, paga como necesites y espera tu equipo; ¡pide y te llegará a tu casa!
             </p>
             <MoreInfo />
           </div>
