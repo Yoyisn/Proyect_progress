@@ -121,6 +121,7 @@ export const techLogin = async (req, res) => {
             id: techFound._id,
             name: techFound.name,
             email: techFound.email,
+            number: techFound.number,
             createAt: techFound.createdAt,
             updateAt: techFound.updateAt,
         });
