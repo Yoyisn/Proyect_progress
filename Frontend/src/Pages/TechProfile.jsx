@@ -3,20 +3,24 @@ import NavBarTechs from '../Components/NavBarTechs.jsx';
 import { useAuth } from '../Context/AuthContext';
 import TimeAgo from '../Components/TimeAgo';
 import multiTec from '../assets/assets/images/multiTecnico.avif';
+import equipoTec from '../assets/assets/images/equipoTecnico.avif';
 
 import { useTasks } from '../Context/TasksContext';
 import { useEffect } from 'react';
 import dayjs from 'dayjs';
 
 
+
 function TechProfilePage() {
 
-    const { getTasks } = useTasks();
+    const { getTasks, getAllTasks } = useTasks();
     const { tecnicoo } = useAuth();
 
     useEffect(() => {
         getTasks()
     }, []);
+
+    console.log(getAllTasks);
 
     return (
         <>
@@ -48,7 +52,12 @@ function TechProfilePage() {
                                 Ver problemas subidos{" "}
                             </Link>
                         </li>
+                        <li className='pb-3'>
+                            <img className='py-5 h-[350px] m-[1px] rounded-lg' src={equipoTec} alt="imagen de tecnicos equipo" />
+
+                        </li>
                     </ul>
+
                     <div>
 
                         <strong className='px-1 text-[10px] font-abc sm:text-[30px] leading-none text-Grayishblue'> Bienvenido {tecnicoo.name}</strong>
@@ -62,6 +71,6 @@ function TechProfilePage() {
 
         </>
     );
-};
+}
 
 export default TechProfilePage;

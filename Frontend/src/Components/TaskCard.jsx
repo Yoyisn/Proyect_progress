@@ -8,6 +8,7 @@ import { useState } from "react";
 
 import dayjs from 'dayjs';
 
+
 dayjs.extend(utc);
 function TaskCard({ task }) {
 
@@ -61,6 +62,7 @@ function TaskCard({ task }) {
                 <strong>Tipo de equipo: {task.dispositive}</strong>
                 <p> Publicado el: {dayjs(task.date).utc().format('DD/MM/YYYY')}</p>
             </div>
+            
         </>
     );
 };

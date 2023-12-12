@@ -48,7 +48,7 @@ function TaskFormPage() {
 
   return (
     <>
-      <h1 className="flex font-abc text-6xl translate-y-[140px] justify-center">
+      <h1 className="flex font-abc text-6xl translate-y-[80px] justify-center">
         {" "}
         <Link to="/tasks"> ServiTech </Link>{" "}
         <img className="flex h-[60px]" src={Logo} alt="Logo Servitecnicos" />
@@ -87,6 +87,20 @@ function TaskFormPage() {
               className="w-full   bg-Grayishblue text-black px-4 py-2 rounded-md my-2"
               type="date"
               {...register("date")}
+            />
+
+            <label> Sube el material audiovisual </label>
+            <input
+              className="w-full  bg-Grayishblue text-black px-4 py-2 rounded-md my-2"
+              type="file"
+              {...register("file-image-to-fix")}
+            />
+
+            <label> Sube el material audiovisual </label>
+            <input
+              className="w-full  bg-Grayishblue text-black px-4 py-2 rounded-md my-2"
+              type="file"
+              {...register("file-image2-to-fix")}
             />
 
             <button className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-4 py-2 rounded-md my-2">
