@@ -65,7 +65,7 @@ function PayLoads() {
 
           <img
             
-            className="flex h-[39.5%] translate-y-[20px] rounded-l-lg shadow-inner hover:shadow-lg shadow-black hover:shadow-black"
+            className="flex h-[26%] translate-y-[20px] rounded-l-lg shadow-inner hover:shadow-lg shadow-black hover:shadow-black"
             src={imageRetroPc}
             alt='Imagen compra subscripcion'
           />
