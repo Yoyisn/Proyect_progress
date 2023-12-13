@@ -10,7 +10,7 @@ const ProfilesideBar = () => {
                             <li>
                                 <Link
                                     to="/profile"
-                                    className="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-200"
+                                    className="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-black dark:bg-gray-800 dark:text-gray-200 hover:text-gray-700"
                                 >
                                     Profile
                                 </Link>
@@ -19,7 +19,7 @@ const ProfilesideBar = () => {
                             <li>
                                 <Link
                                     to=""
-                                    className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+                                    className="block rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200"
                                 >
                                     Team
                                 </Link>
@@ -28,7 +28,7 @@ const ProfilesideBar = () => {
                             <li>
                                 <Link
                                     to="/tasks"
-                                    className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+                                    className="block rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200"
                                 >
                                     Ver o subir tus problemas
                                 </Link>
@@ -37,7 +37,7 @@ const ProfilesideBar = () => {
                             <li>
                                 <Link
                                     to="/toQuote"
-                                    className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+                                    className="block rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200"
                                 >
                                     Cotizaciones de tus problemas
                                 </Link>
@@ -50,7 +50,7 @@ const ProfilesideBar = () => {
                             <li>
                                 <Link
                                     to=""
-                                    className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+                                    className="block rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200"
                                 >
                                     Update
                                 </Link>
@@ -59,7 +59,7 @@ const ProfilesideBar = () => {
                             <li>
                                 <Link
                                     to=""
-                                    className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+                                    className="block rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200"
                                 >
                                     Help
                                 </Link>
@@ -70,7 +70,7 @@ const ProfilesideBar = () => {
                     <li className="py-2">
                     <Link
                                     to="/"
-                                    className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+                                    className="block rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200"
                                     onClick={() => {
                                         logout();
                                     }}
