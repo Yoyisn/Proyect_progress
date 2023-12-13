@@ -13,7 +13,6 @@ function QuoteToUsers() {
 
     return(
         <>
-            <h1> GONORREA </h1>
         </>
     );
 };
