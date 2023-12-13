@@ -2,7 +2,7 @@
 import User from '../Models/user.model.js';
 import bcrypt from 'bcryptjs';
 
-import Tecnico from '../Models/tecnico.models.js';
+import Tecnico from '../Models/tecnico.model.js';
 import { TOKEN_SECRET } from '../config.js';
 import jwt from 'jsonwebtoken';
 

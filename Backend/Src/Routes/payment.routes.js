@@ -1,9 +1,10 @@
 import { checkOut } from '../Controllers/payment.controller.js';
+import { authRequired } from "../Middlewares/validateToken.js";
 import { Router } from 'express';
 
 const router = Router();
 
-router.post('/checkOut', checkOut);
+router.post('/checkOut', authRequired, checkOut);
 
 //router.get('/webHook', (req, res) => res.send('Web Hook'));
 

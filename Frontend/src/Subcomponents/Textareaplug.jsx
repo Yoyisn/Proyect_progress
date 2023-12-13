@@ -2,7 +2,7 @@ import { Textarea, Button } from "@material-tailwind/react";
 import { useForm, Controller } from "react-hook-form";
 import { Modal } from 'flowbite-react';
 
-
+import { useQuote } from "../Context/QuotesContext";
 import { useState } from "react";
 
 function Textareaplug() {
@@ -10,8 +10,11 @@ function Textareaplug() {
     const { handleSubmit, control, reset} = useForm();
     const [isModalOpen, setModalOpen] = useState(false);
 
+    const { createQuote } = useQuote();
+
     const onSubmit = (data) => {
-        console.log(data);
+
+        createQuote(data);
 
         setTimeout(() => {
             setModalOpen(false);

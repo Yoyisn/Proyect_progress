@@ -6,6 +6,7 @@ import cookieParser from "cookie-parser";
 import express from "express";
 import morgan from "morgan";
 
+import quotesRoutes from './Routes/quotes.routes.js';
 import cors from 'cors';
 
 
@@ -25,3 +26,4 @@ app.use(cookieParser());
 app.use("/api", authRoutes);
 app.use("/api", taskRoutes);
 app.use("/api", paymentRoutes);
+app.use("/api", quotesRoutes);
