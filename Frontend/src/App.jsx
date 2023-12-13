@@ -15,9 +15,9 @@ import ProtectedRoute from "./ProtectedRoute";
 import ProfilePage from "./Pages/profilePage";
 
 import TechProfilePage from './Pages/TechProfile';
-// import PageProblems from "./Pages/PageProblems";
 import TechLogin from "./Pages/TechLogin";
 
+import UserPayments from "./Components/UserPayments";
 import PayLoads from "./Pages/PayLoads";
 import Quote from "./Pages/ToQuote";
 
@@ -46,8 +46,6 @@ function App() {
 
               <Route path="/techProfile" element={ <TechProfilePage/> }/>
 
-              {/* <Route path="/comunityProblems" element={ <PageProblems/> }/> */}
-
               <Route path="/comunityProblemsTechs" element={ <PageProblemsTechs/> }/>
 
               <Route path="/tasks" element={ <TasksPage /> } />
@@ -61,6 +59,8 @@ function App() {
               <Route path="/payloads" element={ <PayLoads /> } />
               
               <Route path="/toQuote" element={ <Quote /> } />
+
+              <Route path="/toPaymentQuote" element={ <UserPayments /> } />
 
             </Route>
 

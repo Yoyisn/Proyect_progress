@@ -16,7 +16,7 @@ const quoteSchema= new mongoose.Schema({
     tecnico:{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Tecnico',
-        required: true,
+        required: false,
     }
 }, { timestamps: true, });
 

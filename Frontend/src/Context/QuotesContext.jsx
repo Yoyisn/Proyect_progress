@@ -1,5 +1,4 @@
 import { createQuotesRequest, getAllQuotesRequest } from "../Api/quotes";
-import Textareaplug from '../Subcomponents/Textareaplug.jsx';
 import { createContext, useContext, useState } from "react";
 
 const QuoteContext = createContext();
