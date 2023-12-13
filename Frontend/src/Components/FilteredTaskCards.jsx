@@ -1,8 +1,9 @@
+import Textareaplug from '../Subcomponents/Textareaplug';
 import utc from 'dayjs/plugin/utc';
 import TimeAgo from './TimeAgo';
+
 import dayjs from 'dayjs';
-import Textareaplug from '../Subcomponents/Textareaplug';
-import PrecioPlug from '../Subcomponents/PrecioPlug';
+//import PrecioPlug from '../Subcomponents/PrecioPlug';
 
 dayjs.extend(utc);
 
@@ -20,7 +21,7 @@ function FilteredTaskCards({ tasks }) {
         <p> Publicado hace: <TimeAgo date={tasks.date} /></p>
 
         <Textareaplug />
-        <PrecioPlug />
+        {/*<PrecioPlug />*/}
       </div>
     </>
   );
