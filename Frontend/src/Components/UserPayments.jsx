@@ -84,13 +84,13 @@ function UserPayments() {
     <>
       <div className="shadow-inner hover:shadow-lg px-5 shadow-black hover:shadow-black py-5 mt-10 rounded-md bg-Darkred">
         <h1 className="flex font-abc text-6xl translate-y-[140px] justify-center">
-          <Link to="/techProfile"> ServiTech </Link>
+          <Link to="/profile"> ServiTech </Link>
           <img className="flex h-[60px]" src={Logo} alt="Logo Servitecnicos" />
         </h1>
 
         <div className="flex h-[calc(100vh-100px)] items-center justify-center">
           <img
-            className="flex h-[26%] translate-y-[20px] rounded-l-lg shadow-inner hover:shadow-lg shadow-black hover:shadow-black"
+            className="flex h-[30%] translate-y-[20px] rounded-l-lg shadow-inner hover:shadow-lg shadow-black hover:shadow-black"
             src={imageDomi2}
             alt="Imagen compra subscripcion"
           />

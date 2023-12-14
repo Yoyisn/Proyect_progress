@@ -22,7 +22,7 @@ function TechRegisterPage() {
 
   return (
     <>
-      <h1 className="flex font-abc text-6xl translate-y-[140px] justify-center">
+      <h1 className="flex font-abc text-6xl translate-y-[100px] justify-center">
         {" "}
         <Link to="/"> ServiTech </Link>{" "}
         <img

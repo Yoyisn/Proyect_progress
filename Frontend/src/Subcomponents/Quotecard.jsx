@@ -35,13 +35,13 @@ function QuoteCard({ quotes }) {
                                         </h3>
                                         <div className="flex justify-center gap-4">
 
-                                            <Link to="/toPaymentQuote">
+                                            {/* <Link to="/toPaymentQuote">
                                                 <button className="bg-green-800 hover:bg-green-600 text-white px-4
                     py-2 rounded-md" onClick={() => setOpenModal(false)}> Efectivo </button>
-                                            </Link>
+                                            </Link> */}
 
                                             <Link to="/toPaymentQuote">
-                                                <button className="bg-Bgblue hover:bg-blue-900 text-white px-4
+                                                <button className="bg-green-800 hover:bg-green-600 text-white px-4
                     py-2 rounded-md" onClick={() => setOpenModal(false)}>
                                                     Tarjeta
                                                 </button>

@@ -48,7 +48,7 @@ function TaskFormPage() {
 
   return (
     <>
-      <h1 className="flex font-abc text-6xl translate-y-[80px] justify-center">
+      <h1 className="flex font-abc text-6xl translate-y-[40px] justify-center">
         {" "}
         <Link to="/tasks"> ServiTech </Link>{" "}
         <img className="flex h-[60px]" src={Logo} alt="Logo Servitecnicos" />
