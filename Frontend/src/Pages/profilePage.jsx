@@ -23,13 +23,13 @@ function ProfilePage() {
 
   return (
     <>
-      <div className='flex max-h-[580px] justify-between bg-Darkred shadow-inner hover:shadow-lg shadow-black hover:shadow-black p-5 mt-10 rounded-md'>
+      <div className='flex h-[700px] justify-between bg-Darkred shadow-inner hover:shadow-lg shadow-black hover:shadow-black p-5 mt-10 rounded-md'>
         <ProfilesideBar />
-        <div>
+        <div className='flex flex-col justify-evenly'>
           {/*<Link to="/tasks"> <h2> Ver o subir tus problemas </h2> </Link>*/}
-          <strong className='px-1 text-[10px] font-abc sm:text-[30px] leading-none text-Grayishblue'> Bienvenido {user.username}</strong>
+          <strong className='px-1 text-4xl font-abc leading-none text-Grayishblue'> Bienvenido {user.username}</strong>
           <img className='py-5 h-[350px] m-[1px] rounded-full' src={userimg2} alt="imagen de perfil" />
-          <span className='text-1xl text-Grayishblue font-abc'>Se unio el: {dayjs(user.createAt).utc().format('DD/MM/YYYY')} <br/> Hace: <TimeAgo date={user.createAt}/></span>
+          <span className='text-2xl text-Grayishblue font-abc'>Se unio el: {dayjs(user.createAt).utc().format('DD/MM/YYYY')} <br/> Hace: <TimeAgo date={user.createAt}/></span>
 
         </div>
         <div className='grid grid-rows-3 gap-2 overflow-y-auto scrollbar scrollbar-thumb-Grayishblue scrollbar-track-Darkgrayishblue'>

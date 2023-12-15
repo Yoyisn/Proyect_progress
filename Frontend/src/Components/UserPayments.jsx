@@ -59,8 +59,8 @@ const CheckoutForm = () => {
     <div>
     <form onSubmit={handleSubmit}>
       <CardElement />
-      <button className="bg-Bgbluelow " onClick={ () => (
-        <div>
+      <button className="bg-Bgbluelow font-abc text-3xl block rounded-lg px-4 py-2 my-4 font-medium text-white hover:bg-gray-100 hover:text-gray-700" onClick={ () => (
+        <div> 
             <Modal show={isModalOpen} size="md" onClose={() => setModalOpen(false)} popup>
                  <Modal.Header />
                     <Modal.Body>
@@ -72,7 +72,7 @@ const CheckoutForm = () => {
                 </Modal.Body>
             </Modal>
         </div>
-      )}> Buy </button>
+      )}> Confirmar </button>
     </form>
     </div>
     </>
@@ -90,15 +90,15 @@ function UserPayments() {
 
         <div className="flex h-[calc(100vh-100px)] items-center justify-center">
           <img
-            className="flex h-[30%] translate-y-[20px] rounded-l-lg shadow-inner hover:shadow-lg shadow-black hover:shadow-black"
+            className="flex h-[35%] translate-y-[20px] rounded-l-lg shadow-inner hover:shadow-lg shadow-black hover:shadow-black"
             src={imageDomi2}
             alt="Imagen compra subscripcion"
           />
 
-          <div className="bg-Bgblue max-w-2xl w-full p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black mt-10 rounded-r-lg">
-            <h1 className="text-center text-3xl font-bold my-2">
+          <div className="bg-Bgblue max-w-2xl w-full h-[250px] p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black mt-10 rounded-r-lg">
+            <h1 className="text-center text-3xl font-abc my-6">
               {" "}
-              Pagar Arreglo y aceptar oferta{" "}
+              Pagar y aceptar oferta{" "}
             </h1>
 
             <Elements stripe={stripePromise}>

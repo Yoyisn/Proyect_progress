@@ -22,7 +22,7 @@ function TechRegisterPage() {
 
   return (
     <>
-      <h1 className="flex font-abc text-6xl translate-y-[100px] justify-center">
+      <h1 className="flex font-abc text-6xl translate-y-[60px] justify-center">
         {" "}
         <Link to="/"> ServiTech </Link>{" "}
         <img
@@ -32,9 +32,9 @@ function TechRegisterPage() {
         />
       </h1>
 
-      <div className="shadow-inner hover:shadow-lg px-5 shadow-black hover:shadow-black py-5 mt-10 rounded-md bg-Darkredlow">
+      <div className="shadow-inner hover:shadow-lg px-5 shadow-black hover:shadow-black py-5 rounded-md bg-Darkredlow h-[800px]">
 
-        <div className="flex h-[calc(100vh-100px)] items-center justify-center">
+        <div className="flex flex-col h-[calc(100vh-100px)] items-center justify-center">
 
           <div className="bg-Bgblue max-w-md p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black mt-10 rounded-md overflow-y-scroll max-h-[700px] scrollbar scrollbar-thumb-Grayishblue scrollbar-track-Darkgrayishblue">
             {registerErrors.map((error, i) => {
@@ -44,7 +44,7 @@ function TechRegisterPage() {
               </div>;
             })}
 
-            <h1 className="text-3xl font-bold my-2"> REGISTRO TECNICO </h1>
+            <h1 className="text-3xl my-2 font-abc  flex justify-center"> REGISTRO TECNICO </h1>
 
             <form
               onSubmit={handleSubmit(async (values) => {
@@ -190,18 +190,18 @@ function TechRegisterPage() {
 
 
 
-              <button className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-4 py-2 rounded-md my-2">
+              <button className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-4 py-2 rounded-md my-2 w-[355px]">
                 {" "}
                 Registrarse{" "}
               </button>
             </form>
 
+          </div>
             <Link to="/techLogin">
-              <p className="flex gap-x-2 justify-between">
+              <p className="flex gap-x-2 justify-between mt-4 hover:text-lg">
                 <strong>Ya tienes una cuenta de Técnico? Inicia sesión CLICK ME</strong>
               </p>
             </Link>
-          </div>
         </div>
       </div>
       <Footer />

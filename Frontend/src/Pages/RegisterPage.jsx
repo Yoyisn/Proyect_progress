@@ -33,7 +33,7 @@ function RegisterPage() {
 
       <div className="shadow-inner hover:shadow-lg px-5 shadow-black hover:shadow-black py-5 mt-10 rounded-md bg-Bgblue">
 
-        <div className="flex h-[calc(100vh-100px)] items-center justify-center">
+        <div className="flex flex-col h-[calc(100vh-100px)] items-center justify-center">
           <div className="bg-Darkred max-w-md p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black mt-10 rounded-md">
             {registerErrors.map((error, i) => {
               <div key={i} className="bg-red-500 p-2 text-white text-center">
@@ -42,7 +42,7 @@ function RegisterPage() {
               </div>;
             })}
 
-            <h1 className="text-3xl font-bold my-2"> Register </h1>
+            <h1 className="text-3xl my-2 font-abc  flex justify-center"> REGISTRATE </h1>
 
             <form
               onSubmit={handleSubmit(async (values) => {
@@ -79,22 +79,22 @@ function RegisterPage() {
                 <p className="text-Softorange"> Password required </p>
               )}
 
-              <button className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-4 py-2 rounded-md my-2">
+              <button className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-4 py-2 rounded-md my-2 w-[360px]">
                 {" "}
                 Register{" "}
               </button>
             </form>
 
-            <Link to="/login">
-              <p className="flex gap-x-2 justify-between">
-                Ya tienes una cuenta? CLICK ME
-              </p>
-            </Link>
-
-            <Link to="/techLogin">
-              <strong>Quisieras ser Técnico? CLICK ME</strong>
-            </Link>
           </div>
+          <Link to="/login">
+            <strong className="flex gap-x-2 justify-between mt-4 hover:text-lg">
+              Ya tienes una cuenta? CLICK ME
+            </strong>
+          </Link>
+
+          <Link to="/techLogin">
+            <strong className="flex gap-x-2 justify-between mt-2 hover:text-lg">Quisieras ser Técnico? CLICK ME</strong>
+          </Link>
         </div>
       </div>
       <Footer />

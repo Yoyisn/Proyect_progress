@@ -40,7 +40,7 @@ function LoginPage() {
 
         <div className="shadow-inner hover:shadow-lg px-5 shadow-black hover:shadow-black py-5 mt-10 rounded-md bg-Bgblue">
 
-          <div className="flex h-[calc(100vh-100px)] items-center justify-center">
+          <div className="flex flex-col h-[calc(100vh-100px)] items-center justify-center">
             <div className="bg-Darkred max-w-md w-full p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black mt-10 rounded-md">
               {signinErrors.map((error, i) => {
                 <div
@@ -52,7 +52,7 @@ function LoginPage() {
                 </div>;
               })}
 
-              <h1 className="text-3xl font-bold my-2"> LOGIN </h1>
+              <h1 className="text-3xl font-abc  flex justify-center my-2"> INICIA SESION </h1>
 
               <form onSubmit={onSubmit}>
                 <input
@@ -75,23 +75,23 @@ function LoginPage() {
                   <p className="text-Softorange"> Password required </p>
                 )}
 
-                <button className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-4 py-2 rounded-md my-2">
+                <button className=" bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-4 py-2 rounded-md my-2 w-[360px]">
                   {" "}
                   Login{" "}
                 </button>
               </form>
 
+
+            </div>
               <Link to="/register">
-                <p className="flex gap-x-2 justify-between">
+                <strong className="flex gap-x-2 justify-between mt-4 hover:text-lg ">
                   No tienes una cuenta? crea una! CLICK ME
-                </p>
+                </strong>
               </Link>
 
               <Link to="/techLogin">
-                <strong>Eres Técnico? CLICK ME</strong>
+                <strong className="flex gap-x-2 justify-between mt-2 hover:text-lg">Eres Técnico? CLICK ME</strong>
               </Link>
-
-            </div>
 
           </div>
         </div>

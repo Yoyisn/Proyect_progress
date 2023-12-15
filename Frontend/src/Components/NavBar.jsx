@@ -46,7 +46,7 @@ function NavBar() {
                                     to="/profile"
                                 >
                                     {" "}
-                                    Profile{" "}
+                                    Perfil{" "}
                                 </Link>
                             </li>
                             <li>
@@ -57,7 +57,7 @@ function NavBar() {
                                     }}
                                 >
                                     {" "}
-                                    Logout{" "}
+                                    Cerrar Sesión{" "}
                                 </Link>
                             </li>
                         </>
@@ -69,7 +69,7 @@ function NavBar() {
                                     to="/login"
                                 >
                                     {" "}
-                                    Login{" "}
+                                    Inicio Sesión{" "}
                                 </Link>
                             </li>
                             <li>
@@ -78,7 +78,7 @@ function NavBar() {
                                     to="/register"
                                 >
                                     {" "}
-                                    Register{" "}
+                                    Registrarse{" "}
                                 </Link>
                             </li>
                         </>

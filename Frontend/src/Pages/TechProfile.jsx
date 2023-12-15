@@ -20,24 +20,24 @@ function TechProfilePage() {
 
   return (
     <>
-      <div className="shadow-inner hover:shadow-lg px-5 shadow-black hover:shadow-black py-5 mt-10 rounded-md bg-Darkred">
+      <div className="shadow-inner hover:shadow-lg px-5 shadow-black hover:shadow-black py-5 mt-10 rounded-md bg-Darkred h-[600px]">
         <NavBarTechs />
 
-        <div className="flex justify-evenly">
+        <div className="flex justify-evenly content-evenly">
           <ul className="px-5 py-3">
-            <li className="pb-3 hover:list-disc ">
+            <li className="pb-6 hover:list-disc ">
               <strong> Tecnico Profile </strong>
             </li>
-            <li className="pb-3 hover:list-disc ">
+            <li className="pb-6 hover:list-disc ">
               <Link
                 className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-Bgblue px-4 py-1 rounded-md"
                 to="/payloads"
               >
                 {" "}
-                Compra tu Subscripcion Mensual{" "}
+                Compra tu Subscripción Mensual{" "}
               </Link>
             </li>
-            <li className="pb-3 hover:list-disc ">
+            <li className="pb-6 hover:list-disc ">
               <Link
                 className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-Bgblue px-4 py-1 rounded-md"
                 to="/comunityProblemsTechs"
@@ -46,15 +46,15 @@ function TechProfilePage() {
                 Ver problemas subidos{" "}
               </Link>
             </li>
-            <li className="pb-3 hover:list-disc ">
+            <li className="pb-6 hover:list-disc ">
               <span> Email: {tecnicoo.email}</span>
             </li>
-            <li className="pb-3 hover:list-disc ">
+            <li className="pb-6 hover:list-disc ">
               <span> Telefono: {tecnicoo.number} </span>
             </li>
-            <li className="pb-3 hover:list-disc ">
-            <span className="text-1xl text-Grayishblue font-abc">
-              Se unio el: {dayjs(tecnicoo.createAt).utc().format("DD/MM/YYYY")}{" "}
+            <li className="pb-6 hover:list-disc ">
+            <span className="text-2xl text-Grayishblue font-abc">
+              Se unió el: {dayjs(tecnicoo.createAt).utc().format("DD/MM/YYYY")}{" "}
               <br /> Hace: <TimeAgo date={tecnicoo.createAt} />
             </span>
             </li>
