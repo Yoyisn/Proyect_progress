@@ -25,12 +25,12 @@ function QuoteCard({ quotes }) {
                             <button className="bg-Grayishblue hover:bg-Brown text-black px-4 hover:text-Grayishblue
                     py-2 rounded-md my-2" onClick={() => setOpenModal(true)}>Aceptar Oferta</button>
 
-                            <Modal show={openModal} size="md" onClose={() => setOpenModal(false)} popup>
+                            <Modal show={openModal} size="xl" onClose={() => setOpenModal(false)} popup>
                                 <Modal.Header />
                                 <Modal.Body>
                                     <div className="text-center">
-                                        <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-gray-400 dark:text-gray-200" />
-                                        <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                                        <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-black " />
+                                        <h3 className="mb-5 text-xl font-normal text-black">
                                             Excelente! Con que deseas realizar tu pago?
                                         </h3>
                                         <div className="flex justify-center gap-4">
@@ -42,7 +42,7 @@ function QuoteCard({ quotes }) {
 
                                             <Link to="/toPaymentQuote">
                                                 <button className="bg-green-800 hover:bg-green-600 text-white px-4
-                    py-2 rounded-md" onClick={() => setOpenModal(false)}>
+                    py-2 rounded-md w-[150px]" onClick={() => setOpenModal(false)}>
                                                     Tarjeta
                                                 </button>
                                             </Link>

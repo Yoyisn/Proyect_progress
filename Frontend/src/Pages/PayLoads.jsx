@@ -10,14 +10,21 @@ import axios from "../Api/axios.js";
 import Logo from "../assets/assets/images/image.png";
 import { loadStripe } from "@stripe/stripe-js";
 import { Link } from "react-router-dom";
+import { Modal } from 'flowbite-react';
+import { useState } from "react";
 
 const stripePromise = loadStripe(
   "pk_test_51OG8k5I4yMLMVXppG84B69h88yuMOzziJ5O5t79d1ATaG1sXxucMI2DJEDjQIjdAsrosxvI1QJY3drVkkKXKWxZJ001y5CfKH5"
 );
 
 const CheckoutForm = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
   const stripe = useStripe();
   const elements = useElements();
+
+  setTimeout(() => {
+    setModalOpen(false);
+    }, 2500);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -47,7 +54,20 @@ const CheckoutForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <CardElement />
-      <button className="bg-Bgbluelow "> Buy </button>
+      <button className="bg-Bgbluelow font-abc text-3xl block rounded-lg px-4 py-2 my-4 font-medium text-white hover:bg-gray-100 hover:text-gray-700" onClick={ () => (
+        <div> 
+            <Modal show={isModalOpen} size="md" onClose={() => setModalOpen(false)} popup>
+                 <Modal.Header />
+                    <Modal.Body>
+                        <div className="text-center">
+                            <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                            Tu pago ha sido exitoso
+                            </h3>
+                        </div>
+                </Modal.Body>
+            </Modal>
+        </div>
+      )}> Comprar! </button>
     </form>
   );
 };
@@ -63,15 +83,15 @@ function PayLoads() {
 
         <div className="flex h-[calc(100vh-100px)] items-center justify-center">
           <img
-            className="flex h-[26%] translate-y-[20px] rounded-l-lg shadow-inner hover:shadow-lg shadow-black hover:shadow-black"
+            className="flex h-[39%] translate-y-[20px] rounded-l-lg shadow-inner hover:shadow-lg shadow-black hover:shadow-black"
             src={imageRetroPc}
             alt="Imagen compra subscripcion"
           />
 
           <div className="bg-Bgblue max-w-2xl w-full p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black mt-10 rounded-r-lg">
-            <h1 className="text-center text-3xl font-bold my-2">
+            <h1 className="text-center text-3xl font-abc my-2">
               {" "}
-              Subscripcion Mensual{" "}
+              Subscripción Mensual{" "}
             </h1>
 
             <Elements stripe={stripePromise}>
@@ -80,7 +100,7 @@ function PayLoads() {
 
             <p className="text-center">
               {" "}
-              Subscripcion mensual a ServiTech, 30 dias{" "}
+              Subscripción mensual a ServiTech, 30 dias{" "}
             </p>
 
             <h3 className="text-center">Precio: 10 US</h3>

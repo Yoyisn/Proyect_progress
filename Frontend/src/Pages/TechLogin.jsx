@@ -34,10 +34,10 @@ function TechLogin() {
           alt="Logo Servitecnicos"
         />
       </h1>
-      <div className="shadow-inner hover:shadow-lg px-5 shadow-black hover:shadow-black py-5 mt-10 rounded-md bg-Darkredlow">
+      <div className="shadow-inner hover:shadow-lg px-5 shadow-black hover:shadow-black py-5 rounded-md bg-Darkredlow h-[800px]">
 
 
-        <div className="flex h-[calc(100vh-100px)] items-center justify-center">
+        <div className="flex flex-col h-[calc(100vh-100px)] items-center justify-center">
           <div className="bg-Bgblue max-w-md w-full p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black mt-10 rounded-md">
             {signinErrors.map((error, i) => {
               <div
@@ -49,7 +49,7 @@ function TechLogin() {
               </div>;
             })}
 
-            <h1 className="text-3xl font-bold my-2"> LOGIN TECNICO </h1>
+            <h1 className="text-3xl font-abc my-2 flex justify-center"> INICIO SESION TECNICO </h1>
 
             <form onSubmit={onSubmit}>
               <input
@@ -72,18 +72,18 @@ function TechLogin() {
                 <p className="text-Softorange"> Password required </p>
               )}
 
-              <button className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-4 py-2 rounded-md my-2">
+              <button className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-4 py-2 rounded-md my-2 w-[360px]">
                 {" "}
                 Login{" "}
               </button>
             </form>
 
-            <Link to="/techRegister">
-              <p className="flex gap-x-2 justify-between">
-                Aún no tienes tu cuenta de Técnico? CLICK ME
-              </p>
-            </Link>
           </div>
+            <Link to="/techRegister">
+              <strong className="flex gap-x-2 justify-between mt-4 hover:text-lg">
+                Aún no tienes tu cuenta de Técnico? CLICK ME
+              </strong>
+            </Link>
         </div>
       </div>
       <Footer />

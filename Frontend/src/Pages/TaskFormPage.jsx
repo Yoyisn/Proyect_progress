@@ -48,13 +48,17 @@ function TaskFormPage() {
 
   return (
     <>
-      <h1 className="flex font-abc text-6xl translate-y-[40px] justify-center">
+      <h1 className="flex font-abc text-6xl translate-y-[20px] justify-center">
         {" "}
         <Link to="/tasks"> ServiTech </Link>{" "}
         <img className="flex h-[60px]" src={Logo} alt="Logo Servitecnicos" />
       </h1>
       <div className="flex h-[calc(100vh-100px)] items-center justify-center">
-        <div className="bg-Darkred max-w-md w-full p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black rounded-md">
+
+        <div className="bg-Darkred max-w-md w-full p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black rounded-md overflow-y-scroll max-h-[600px] scrollbar scrollbar-thumb-Grayishblue scrollbar-track-Darkgrayishblue">
+
+          <h1 className="flex justify-center text-3xl font-abc my-2"> ¿Qué deseas resolver hoy? </h1>
+
           <form onSubmit={onSubmit}>
             <label htmlFor="title"> Title </label>
             <input
@@ -67,7 +71,7 @@ function TaskFormPage() {
 
             <label htmlFor="description"> Description </label>
             <textarea
-              className="w-full   bg-Grayishblue text-black px-4 py-2 rounded-md my-2"
+              className="w-full   bg-white text-black px-4 py-2 rounded-md my-2"
               rows="3"
               placeholder="Description"
               {...register("description", { required: true })}
@@ -103,7 +107,14 @@ function TaskFormPage() {
               {...register("file-image2-to-fix")}
             />
 
-            <button className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-4 py-2 rounded-md my-2">
+            <label> Sube el material audiovisual </label>
+            <input
+              className="w-full  bg-Grayishblue text-black px-4 py-2 rounded-md my-2"
+              type="file"
+              {...register("file-image2-to-fix")}
+            />
+
+            <button className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-4 py-2 rounded-md my-2 w-[360px]">
               {" "}
               Save{" "}
             </button>

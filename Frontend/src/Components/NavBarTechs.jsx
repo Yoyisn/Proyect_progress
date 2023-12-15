@@ -39,7 +39,7 @@ function NavBarTechs() {
                                     to="/techProfile"
                                 >
                                     {" "}
-                                    Profile{" "}
+                                    Perfil{" "}
                                 </Link>
                             </li>
                             <li>
@@ -50,7 +50,7 @@ function NavBarTechs() {
                                     }}
                                 >
                                     {" "}
-                                    Logout{" "}
+                                    Cerrar Sesión{" "}
                                 </Link>
                             </li>
                         </>
@@ -62,7 +62,7 @@ function NavBarTechs() {
                                     to="/login"
                                 >
                                     {" "}
-                                    Login{" "}
+                                    Iniciar Sesión{" "}
                                 </Link>
                             </li>
                             <li>
@@ -71,7 +71,7 @@ function NavBarTechs() {
                                     to="/register"
                                 >
                                     {" "}
-                                    Register{" "}
+                                    Registrarse{" "}
                                 </Link>
                             </li>
                         </>
