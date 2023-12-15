@@ -9,6 +9,12 @@ function QuoteCard({ quotes }) {
 
     const [openModal, setOpenModal] = useState(false);
 
+    
+    setTimeout(() => {
+        setOpenModal(false);
+      }, 2500);
+      
+
     return (
         <>
 

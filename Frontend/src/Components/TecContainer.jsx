@@ -11,6 +11,7 @@ const TecContainer = () => {
         <Link to='/techRegister'>
         <TecArticle
           tittle="¡No pierdas la oportunidad! Unete a nosotros y empieza a recibir problemas técnicos, buscamos alguien como tu."
+          
           text="Recibe peticiones de servicios en toda tu localidad,  organiza tu perfil publico y maneja tus propios horarios."
         />
         </Link>

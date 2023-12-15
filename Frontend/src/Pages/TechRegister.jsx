@@ -8,9 +8,10 @@ import Logo from "../assets/assets/images/image.png";
 import Footer from "../Components/Footer";
 
 
+
 function TechRegisterPage() {
 
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, watch, handleSubmit, formState: { errors } } = useForm();
 
   const { sigupTecnico, isAuthenticated, errors: registerErrors } = useAuth();
 
@@ -78,7 +79,20 @@ function TechRegisterPage() {
                 {...register("password", { required: true })}
               />
               {errors.password && (
-                <p className="text-Softorange"> Contrasena es requerida </p>
+                <p className="text-Softorange"> Contraseña es requerida </p>
+              )}
+
+              <input
+                className="w-full bg-Grayishblue text-black px-4 py-2 rounded-md my-2"
+                type="password"
+                placeholder="Confirmar Contraseña"
+                {...register("confirmPassword", {
+                  required: true,
+                  validate: (value) => value === watch("password"),
+                })}
+              />
+              {errors.confirmPassword && (
+                <p className="text-Softorange"> Las contraseñas no coinciden </p>
               )}
 
               <input
@@ -89,7 +103,7 @@ function TechRegisterPage() {
                 {...register("number", { required: true })}
               />
               {errors.number && (
-                <p className="text-Softorange"> El numero es requerido </p>
+                <p className="text-Softorange"> El número es requerido </p>
               )}
 
               <input
@@ -197,11 +211,11 @@ function TechRegisterPage() {
             </form>
 
           </div>
-            <Link to="/techLogin">
-              <p className="flex gap-x-2 justify-between mt-4 hover:text-lg">
-                <strong>Ya tienes una cuenta de Técnico? Inicia sesión CLICK ME</strong>
-              </p>
-            </Link>
+          <Link to="/techLogin">
+            <p className="flex gap-x-2 justify-between mt-4 hover:text-lg">
+              <strong>Ya tienes una cuenta de Técnico? Inicia sesión CLICK ME</strong>
+            </p>
+          </Link>
         </div>
       </div>
       <Footer />

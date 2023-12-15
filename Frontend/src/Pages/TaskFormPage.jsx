@@ -46,6 +46,7 @@ function TaskFormPage() {
     navigate("/tasks");
   });
 
+
   return (
     <>
       <h1 className="flex font-abc text-6xl translate-y-[20px] justify-center">
@@ -69,7 +70,7 @@ function TaskFormPage() {
               autoFocus
             />
 
-            <label htmlFor="description"> Description </label>
+            <label htmlFor="description"> Descripción </label>
             <textarea
               className="w-full   bg-white text-black px-4 py-2 rounded-md my-2"
               rows="3"
@@ -92,13 +93,15 @@ function TaskFormPage() {
               type="date"
               {...register("date")}
             />
-
-            <label> Sube el material audiovisual </label>
-            <input
-              className="w-full  bg-Grayishblue text-black px-4 py-2 rounded-md my-2"
-              type="file"
-              {...register("file-image-to-fix")}
-            />
+            
+              <label> Sube el material audiovisual </label>
+              <input
+                accept="image/*"
+                className="w-full  bg-Grayishblue text-black px-4 py-2 rounded-md my-2"
+                type="file"
+                {...register("filePro")}
+              />
+            
 
             <label> Sube el material audiovisual </label>
             <input

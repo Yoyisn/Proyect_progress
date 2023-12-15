@@ -71,30 +71,30 @@ function Textareaplug({ tasks }) {
 
                 <Controller name="tecnico_id" control={control}
                     defaultValue={otherData.tech_id} render={({ field }) => 
-                    <input {...field} />} />
+                    <input className="border p-2 mr-2 opacity-0 cursor-not-allowed absolute" {...field} />} />
 
                 <Controller name="tecnico_name" control={control}
                     defaultValue={otherData.name} render={({ field }) => 
-                    <input {...field} />} />
+                    <input className="border p-2 mr-2 opacity-0 cursor-not-allowed absolute"{...field} />} />
 
                 <Controller name="tecnico_email" control={control}
                     defaultValue={otherData.email} render={({ field }) => 
-                    <input {...field} />} />
+                    <input className="border p-2 mr-2 opacity-0 cursor-not-allowed absolute"{...field} />} />
 
                 <Controller name="task_id" control={control}
                     defaultValue={otherData.taskId} render={({ field }) => 
-                    <input {...field} />} />
+                    <input className="border p-2 mr-2 opacity-0 cursor-not-allowed absolute"{...field} />} />
 
                 <Controller name="task_user" control={control}
                     defaultValue={otherData.userTasks} render={({ field }) => 
-                    <input {...field} />} />
+                    <input className="border p-2 mr-2 opacity-0 cursor-not-allowed absolute"{...field} />} />
 
 
 
                 <Controller name="dropDown" rules={{ required: 'You must put the price' }} defaultValue="" control={ control } render={ ({ field, fieldState }) => (
                     <>
                         Select a price:
-                        <select className="text-black" {...field}>
+                        <select className="text-black mt-10" {...field}>
                             <option value="5000">5.000</option>
                             <option value="10000">10.000</option>
                             <option value="15000">15.000</option>

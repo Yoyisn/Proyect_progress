@@ -10,6 +10,7 @@ import quotesRoutes from './Routes/quotes.routes.js';
 import cors from 'cors';
 
 
+
 export const app = express();
 
 app.use(cors({

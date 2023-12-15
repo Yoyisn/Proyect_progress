@@ -18,13 +18,15 @@ const stripePromise = loadStripe(
 );
 
 const CheckoutForm = () => {
-  const [isModalOpen, setModalOpen] = useState(false);
+  
   const stripe = useStripe();
   const elements = useElements();
 
   setTimeout(() => {
-    setModalOpen(false);
-    }, 2500);
+    setOpenModal(false);
+  }, 2500);
+
+  const [openModal, setOpenModal] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -51,23 +53,22 @@ const CheckoutForm = () => {
     }
   };
 
+  
+
   return (
     <form onSubmit={handleSubmit}>
       <CardElement />
-      <button className="bg-Bgbluelow font-abc text-3xl block rounded-lg px-4 py-2 my-4 font-medium text-white hover:bg-gray-100 hover:text-gray-700" onClick={ () => (
-        <div> 
-            <Modal show={isModalOpen} size="md" onClose={() => setModalOpen(false)} popup>
-                 <Modal.Header />
-                    <Modal.Body>
-                        <div className="text-center">
-                            <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
-                            Tu pago ha sido exitoso
-                            </h3>
-                        </div>
-                </Modal.Body>
-            </Modal>
-        </div>
-      )}> Comprar! </button>
+      <button className="bg-Bgbluelow font-abc text-3xl block rounded-lg px-4 py-2 my-4 font-medium text-white hover:bg-gray-100 hover:text-gray-700" onClick={() => setOpenModal(true)}> Comprar! </button>
+      <Modal show={openModal} size="md" onClose={() => setOpenModal(false)} popup>
+        <Modal.Header />
+        <Modal.Body>
+          <div className="text-center">
+            <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+              Tu pago ha sido exitoso
+            </h3>
+          </div>
+        </Modal.Body>
+      </Modal>
     </form>
   );
 };

@@ -9,11 +9,13 @@ import Footer from "../Components/Footer";
 
 function RegisterPage() {
 
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, watch, handleSubmit, formState: { errors } } = useForm();
 
   const { sigup, isAuthenticated, errors: registerErrors } = useAuth();
 
   const navigate = useNavigate();
+
+  
 
   useEffect(() => {
     if (isAuthenticated) navigate("/profile");
@@ -53,10 +55,10 @@ function RegisterPage() {
                 className="w-full bg-Grayishblue text-black px-4 py-2 rounded-md my-2"
                 type="text"
                 {...register("username", { required: true })}
-                placeholder="Username"
+                placeholder="Nombre de usuario"
               />
               {errors.username && (
-                <p className="text-Softorange"> Username required </p>
+                <p className="text-Softorange"> El nombre de usuario es requerido </p>
               )}
 
               <input
@@ -66,17 +68,30 @@ function RegisterPage() {
                 placeholder="E-mail"
               />
               {errors.email && (
-                <p className="text-Softorange"> Email required </p>
+                <p className="text-Softorange"> El email es requerido </p>
               )}
 
               <input
                 className="w-full bg-Grayishblue text-black px-4 py-2 rounded-md my-2"
                 type="password"
                 {...register("password", { required: true })}
-                placeholder="Password"
+                placeholder="Contraseña"
               />
               {errors.password && (
-                <p className="text-Softorange"> Password required </p>
+                <p className="text-Softorange"> La contraseña es requerida </p>
+              )}
+
+              <input
+                className="w-full bg-Grayishblue text-black px-4 py-2 rounded-md my-2"
+                type="password"
+                placeholder="Confirmar Contraseña"
+                {...register("confirmPassword", {
+                  required: true,
+                  validate: (value) => value === watch("password"),
+                })}
+              />
+              {errors.confirmPassword && (
+                <p className="text-Softorange"> Las contraseñas no coinciden </p>
               )}
 
               <button className="bg-Grayishblue hover:bg-Brown hover:text-Grayishblue text-black px-4 py-2 rounded-md my-2 w-[360px]">

@@ -6,10 +6,10 @@ import { useEffect } from 'react';
 
 function QuoteToUsers() {
 
-    const { quotes, getQuotes } = useQuote();
+    const { quotes, getAllQuotes } = useQuote();
 
     useEffect(() => {
-        getQuotes();
+        getAllQuotes();
     }, []);
 
     console.log(quotes);
