@@ -1,4 +1,4 @@
-import { createQuotesRequest, getAllQuotesRequest } from "../Api/quotes";
+import { createQuotesRequest, getAllQuotesRequest, getQuoteskRequest } from "../Api/quotes";
 import { createContext, useContext, useState } from "react";
 
 const QuoteContext = createContext();
@@ -35,10 +35,18 @@ export function QuoteProvider({ children }) {
         }
     };
 
+    const getQuotes = async (taskId) => {
+        try {
+            const res = await getQuoteskRequest(taskId);
+            setQuotes(res.data);
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
     return (
         <>
-            <QuoteContext.Provider value={{ quotes, createQuote, getAllQuotes}}>
-            {/* Textareaplug */}
+            <QuoteContext.Provider value={{ quotes, createQuote, getAllQuotes, getQuotes}}>
             { children }
              </QuoteContext.Provider>
         </>

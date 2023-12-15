@@ -13,11 +13,26 @@ const quoteSchema= new mongoose.Schema({
       type: String,
       required: true,
     },
-    tecnico:{
+    task_user:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    },
+    task_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Task'
+    },
+    tecnico_id:{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Tecnico',
-        required: false,
+        required: true
+    },
+    tecnico_name: {
+        type: String
+    },
+    tecnico_email: {
+        type: String
     }
 }, { timestamps: true, });
+
 
 export default mongoose.model('Quotes', quoteSchema);

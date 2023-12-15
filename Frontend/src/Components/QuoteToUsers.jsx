@@ -6,10 +6,10 @@ import { useEffect } from 'react';
 
 function QuoteToUsers() {
 
-    const { quotes, getAllQuotes } = useQuote();
+    const { quotes, getQuotes } = useQuote();
 
     useEffect(() => {
-        getAllQuotes();
+        getQuotes();
     }, []);
 
     console.log(quotes);
@@ -23,7 +23,6 @@ function QuoteToUsers() {
                 {
                     quotes.map((quote) => (
                         <QuoteCard quotes={quote} key={quote.id} />
-
                     ))
                 }
             </div>

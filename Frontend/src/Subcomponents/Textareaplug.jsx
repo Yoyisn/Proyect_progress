@@ -3,24 +3,54 @@ import { useForm, Controller } from "react-hook-form";
 import { Modal } from 'flowbite-react';
 
 import { useQuote } from "../Context/QuotesContext";
-import { useState } from "react";
+//import { useTasks } from "../Context/TasksContext";
+import { useAuth } from "../Context/AuthContext";
 
-function Textareaplug() {
+import { useState, useEffect } from "react";
 
-    const { handleSubmit, control, reset} = useForm();
+function Textareaplug({ tasks }) {
+
+    const { handleSubmit, control, reset, setValue} = useForm();
     const [isModalOpen, setModalOpen] = useState(false);
 
     const { createQuote } = useQuote();
+    const { tecnicoo } = useAuth();
+
+    console.log(tecnicoo);
+    
+    const otherData = {
+        tech_id: tecnicoo.id,
+        name: tecnicoo.name,
+        email: tecnicoo.email,
+        taskId: tasks._id,
+        userTasks: tasks.user._id
+    };
+
+    useEffect( () => {
+        Object.keys(otherData).forEach( (key) => {
+            setValue(key, otherData[key]);
+        });
+    }, [setValue, otherData]);
 
     const onSubmit = (data) => {
+        try {
 
-        createQuote(data);
+            const tasksProblem = otherData.taskId;
 
-        setTimeout(() => {
-            setModalOpen(false);
-        }, 2500);
+            const dataToSend = {
+                ...data, tasksProblem
+            };
 
-        reset();
+            createQuote(dataToSend);
+
+            setTimeout(() => {
+                setModalOpen(false);
+            }, 2500);
+
+            reset();
+        } catch (error) {
+            console.log(error);
+        }
     };
 
    
@@ -36,6 +66,30 @@ function Textareaplug() {
                         { fieldState.error && <p className="text-Softorange">{fieldState.error.message}</p> }
                     </>
                 )}/>
+
+            
+
+                <Controller name="tecnico_id" control={control}
+                    defaultValue={otherData.tech_id} render={({ field }) => 
+                    <input {...field} />} />
+
+                <Controller name="tecnico_name" control={control}
+                    defaultValue={otherData.name} render={({ field }) => 
+                    <input {...field} />} />
+
+                <Controller name="tecnico_email" control={control}
+                    defaultValue={otherData.email} render={({ field }) => 
+                    <input {...field} />} />
+
+                <Controller name="task_id" control={control}
+                    defaultValue={otherData.taskId} render={({ field }) => 
+                    <input {...field} />} />
+
+                <Controller name="task_user" control={control}
+                    defaultValue={otherData.userTasks} render={({ field }) => 
+                    <input {...field} />} />
+
+
 
                 <Controller name="dropDown" rules={{ required: 'You must put the price' }} defaultValue="" control={ control } render={ ({ field, fieldState }) => (
                     <>

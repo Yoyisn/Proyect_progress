@@ -23,7 +23,7 @@ function FilteredTaskCards({ tasks }) {
 
 
       <QuoteProvider>
-        <Textareaplug />
+        <Textareaplug tasks={tasks}/>
       </QuoteProvider> 
       </div>
     </>
