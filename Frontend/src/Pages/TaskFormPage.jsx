@@ -7,6 +7,8 @@ import { useEffect } from "react";
 import dayjs from "dayjs";
 
 import Logo from "../assets/assets/images/image.png";
+import celroto from "../assets/assets/images/celroto.png"
+import tvroto from "../assets/assets/images/tvrotoimg.png"
 
 dayjs.extend(utc);
 function TaskFormPage() {
@@ -54,6 +56,8 @@ function TaskFormPage() {
         <Link to="/tasks"> ServiTech </Link>{" "}
         <img className="flex h-[60px]" src={Logo} alt="Logo Servitecnicos" />
       </h1>
+
+
       <div className="flex h-[calc(100vh-100px)] items-center justify-center">
 
         <div className="bg-Darkred max-w-md w-full p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black rounded-md overflow-y-scroll max-h-[600px] scrollbar scrollbar-thumb-Grayishblue scrollbar-track-Darkgrayishblue">
@@ -93,15 +97,15 @@ function TaskFormPage() {
               type="date"
               {...register("date")}
             />
-            
-              <label> Sube el material audiovisual </label>
-              <input
-                accept="image/*"
-                className="w-full  bg-Grayishblue text-black px-4 py-2 rounded-md my-2"
-                type="file"
-                {...register("filePro")}
-              />
-            
+
+            <label> Sube el material audiovisual </label>
+            <input
+              accept="image/*"
+              className="w-full  bg-Grayishblue text-black px-4 py-2 rounded-md my-2"
+              type="file"
+              {...register("filePro")}
+            />
+
 
             <label> Sube el material audiovisual </label>
             <input
@@ -124,6 +128,14 @@ function TaskFormPage() {
           </form>
         </div>
       </div>
+      <div className="pointer-events-none">
+        <img className="flex -translate-y-[600px]" src={celroto} alt="Celular roto" />
+      </div>
+
+      <div className="pointer-events-none">
+        <img className="flex translate-x-[899px] -translate-y-[999px]" src={tvroto} alt="Televisor roto" />
+      </div>
+
     </>
   );
 }

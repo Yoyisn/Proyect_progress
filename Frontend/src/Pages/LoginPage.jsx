@@ -5,6 +5,7 @@ import { useAuth } from "../Context/AuthContext";
 import { useForm } from "react-hook-form";
 import Footer from "../Components/Footer";
 import { useEffect } from "react";
+import tecnicoazul from "../assets/assets/images/tecnicoazul.png"
 
 function LoginPage() {
   const {
@@ -38,7 +39,7 @@ function LoginPage() {
           />
         </h1>
 
-        <div className="shadow-inner hover:shadow-lg px-5 shadow-black hover:shadow-black py-5 mt-10 rounded-md bg-Bgblue">
+        <div className="shadow-inner hover:shadow-lg px-5 shadow-black hover:shadow-black py-5 mt-10 rounded-md bg-Bgblue max-h-[720px]">
 
           <div className="flex flex-col h-[calc(100vh-100px)] items-center justify-center">
             <div className="bg-Darkred max-w-md w-full p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black mt-10 rounded-md">
@@ -83,16 +84,19 @@ function LoginPage() {
 
 
             </div>
-              <Link to="/register">
-                <strong className="flex gap-x-2 justify-between mt-4 hover:text-lg ">
-                  No tienes una cuenta? crea una! CLICK ME
-                </strong>
-              </Link>
+            <Link to="/register">
+              <strong className="flex gap-x-2 justify-between mt-4 hover:text-lg ">
+                No tienes una cuenta? crea una! CLICK ME
+              </strong>
+            </Link>
 
-              <Link to="/techLogin">
-                <strong className="flex gap-x-2 justify-between mt-2 hover:text-lg">Eres Técnico? CLICK ME</strong>
-              </Link>
+            <Link to="/techLogin">
+              <strong className="flex gap-x-2 justify-between mt-2 hover:text-lg">Eres Técnico? CLICK ME</strong>
+            </Link>
 
+          </div>
+          <div className="pointer-events-none">
+            <img className="flex translate-x-[899px] -translate-y-[850px]" src={tecnicoazul} alt="Televisor roto" />
           </div>
         </div>
         <Footer />

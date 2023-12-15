@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from "react";
 import Logo from "../assets/assets/images/image.png";
 import Footer from "../Components/Footer";
+import tool from "../assets/assets/images/tool.png";
+import destornillador from "../assets/assets/images/desto.webp";
 
 
 
@@ -37,7 +39,7 @@ function TechRegisterPage() {
 
         <div className="flex flex-col h-[calc(100vh-100px)] items-center justify-center">
 
-          <div className="bg-Bgblue max-w-md p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black mt-10 rounded-md overflow-y-scroll max-h-[700px] scrollbar scrollbar-thumb-Grayishblue scrollbar-track-Darkgrayishblue">
+          <div className="bg-Bgblue max-w-md p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black mt-10 rounded-md overflow-y-scroll max-h-[600px] scrollbar scrollbar-thumb-Grayishblue scrollbar-track-Darkgrayishblue">
             {registerErrors.map((error, i) => {
               <div key={i} className="bg-Softorange p-2 text-black text-center">
                 {" "}
@@ -216,6 +218,12 @@ function TechRegisterPage() {
               <strong>Ya tienes una cuenta de Técnico? Inicia sesión CLICK ME</strong>
             </p>
           </Link>
+        </div>
+        <div className="pointer-events-none">
+          <img className="flex translate-x-[990px] -translate-y-[850px] w-[25%] h-[25%]" src={tool} alt="Herramientas" />
+        </div>
+        <div className="pointer-events-none">
+          <img className="flex -translate-y-[600px] w-[25%] h-[25%]" src={destornillador} alt="destornillador" />
         </div>
       </div>
       <Footer />

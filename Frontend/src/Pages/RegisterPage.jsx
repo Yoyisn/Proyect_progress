@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { useNavigate, Link } from 'react-router-dom';
 import Logo from "../assets/assets/images/image.png";
 import Footer from "../Components/Footer";
+import tecnicoazul from "../assets/assets/images/tecnicoazul.png"
 
 
 function RegisterPage() {
@@ -15,7 +16,7 @@ function RegisterPage() {
 
   const navigate = useNavigate();
 
-  
+
 
   useEffect(() => {
     if (isAuthenticated) navigate("/profile");
@@ -33,7 +34,7 @@ function RegisterPage() {
         />
       </h1>
 
-      <div className="shadow-inner hover:shadow-lg px-5 shadow-black hover:shadow-black py-5 mt-10 rounded-md bg-Bgblue">
+      <div className="shadow-inner hover:shadow-lg px-5 shadow-black hover:shadow-black py-5 mt-10 rounded-md bg-Bgblue max-h-[720px]">
 
         <div className="flex flex-col h-[calc(100vh-100px)] items-center justify-center">
           <div className="bg-Darkred max-w-md p-10 shadow-inner hover:shadow-lg shadow-black hover:shadow-black mt-10 rounded-md">
@@ -110,6 +111,9 @@ function RegisterPage() {
           <Link to="/techLogin">
             <strong className="flex gap-x-2 justify-between mt-2 hover:text-lg">Quisieras ser Técnico? CLICK ME</strong>
           </Link>
+        </div>
+        <div className="pointer-events-none">
+          <img className="flex translate-x-[899px] -translate-y-[850px]" src={tecnicoazul} alt="Televisor roto" />
         </div>
       </div>
       <Footer />

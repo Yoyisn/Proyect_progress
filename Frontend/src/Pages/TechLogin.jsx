@@ -5,6 +5,8 @@ import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import Logo from "../assets/assets/images/image.png";
 import Footer from "../Components/Footer";
+import tool from "../assets/assets/images/tool.png";
+import destornillador from "../assets/assets/images/desto.webp";
 
 
 function TechLogin() {
@@ -79,11 +81,17 @@ function TechLogin() {
             </form>
 
           </div>
-            <Link to="/techRegister">
-              <strong className="flex gap-x-2 justify-between mt-4 hover:text-lg">
-                Aún no tienes tu cuenta de Técnico? CLICK ME
-              </strong>
-            </Link>
+          <Link to="/techRegister">
+            <strong className="flex gap-x-2 justify-between mt-4 hover:text-lg">
+              Aún no tienes tu cuenta de Técnico? CLICK ME
+            </strong>
+          </Link>
+        </div>
+        <div className="pointer-events-none">
+          <img className="flex translate-x-[990px] -translate-y-[850px] w-[25%] h-[25%]" src={tool} alt="Herramientas" />
+        </div>
+        <div className="pointer-events-none">
+          <img className="flex -translate-y-[600px] w-[25%] h-[25%]" src={destornillador} alt="destornillador" />
         </div>
       </div>
       <Footer />
